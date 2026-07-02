@@ -131,9 +131,43 @@ function initYear() {
   if (el) el.textContent = new Date().getFullYear();
 }
 
-/* ──────────────────────────────────────────────
+/* ══════════════════════════════════════════════
+   MODAL AVISO DE PRIVACIDAD
+   Muestra el modal al primer acceso; guarda aceptación en localStorage
+   ══════════════════════════════════════════════ */
+function initPrivacyModal() {
+  const STORAGE_KEY = 'dentalMoonPrivacyAccepted';
+  const modal = document.getElementById('privacyModal');
+  if (!modal) return;
+
+  // Ya aceptado: no mostrar
+  if (localStorage.getItem(STORAGE_KEY)) return;
+
+  // Mostrar modal
+  modal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+
+  function closeModal() {
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  // Botón Aceptar y continuar
+  const acceptBtn = document.getElementById('privacyModalAccept');
+  if (acceptBtn) {
+    acceptBtn.addEventListener('click', () => {
+      localStorage.setItem(STORAGE_KEY, '1');
+      closeModal();
+    });
+  }
+
+  // Botón Leer aviso: permite navegar sin cerrar el modal (abre nueva pestaña)
+  // Si vuelven, el modal sigue hasta que acepten
+}
+
+/* ══════════════════════════════════════════════
    WIZARD — Guía rápida de consulta
-   ────────────────────────────────────────────── */
+   ══════════════════════════════════════════════ */
 function initWizard() {
   const form = $('#wizardForm');
   if (!form) return;
@@ -174,6 +208,28 @@ function initWizard() {
     btn.addEventListener('click', () => showPanel(Number(btn.dataset.prev)));
   });
 
+  /* Step 1 → Step 2: validar checkbox de privacidad */
+  const nextStep1Btn = document.getElementById('wizardNextStep1');
+  const consentCheck = document.getElementById('w-privacy-consent');
+  const consentError = document.getElementById('privacyConsentError');
+
+  if (nextStep1Btn) {
+    nextStep1Btn.addEventListener('click', () => {
+      if (consentCheck && !consentCheck.checked) {
+        consentError.style.display = 'block';
+        consentCheck.focus();
+        return;
+      }
+      if (consentError) consentError.style.display = 'none';
+      showPanel(2);
+    });
+  }
+  if (consentCheck && consentError) {
+    consentCheck.addEventListener('change', () => {
+      if (consentCheck.checked) consentError.style.display = 'none';
+    });
+  }
+
   /* Build message from form data */
   function getVal(name) {
     const el = form.elements[name];
@@ -210,12 +266,25 @@ function initWizard() {
       `Síntomas/motivo: ${sintomas.length ? sintomas.join(', ') : 'No indicados'}`,
       `Comentarios: ${comentarios}`,
       ``,
-      `Entiendo que esta guía no sustituye una consulta profesional ni representa un diagnóstico médico.`
+      `Entiendo que esta guía no sustituye una consulta profesional ni representa un diagnóstico médico.`,
+      ``,
+      `He leído y acepto el Aviso de Privacidad Integral de Dental Moon Clinic & Spa para el uso de mis datos con fines de orientación y agendamiento.`
     ].join('\n');
   }
 
   function generateMessage() {
-    const msg     = buildMessageText();
+    /* Verificar checkbox de privacidad antes de generar */
+    const consentChk = document.getElementById('w-privacy-consent');
+    if (consentChk && !consentChk.checked) {
+      const err = document.getElementById('privacyConsentError');
+      if (err) err.style.display = 'block';
+      showPanel(1);
+      showToast('⚠️ Por favor acepta el Aviso de Privacidad Integral primero.');
+      return;
+    }
+
+    const msg = buildMessageText();
+    if (!msg) return; // consent check already returned early
     const preview = $('#messagePreview');
     const sendBtn = $('#sendWizard');
 
@@ -321,6 +390,7 @@ function initGallery() {
 
 /* ── Init all ── */
 document.addEventListener('DOMContentLoaded', () => {
+  initPrivacyModal();
   initHeader();
   initActiveNav();
   initReveal();

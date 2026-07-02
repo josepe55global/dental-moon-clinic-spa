@@ -1,17 +1,20 @@
 <!doctype html>
 <html lang="es-MX">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dental Moon Clinic &amp; Spa | Clínica dental en Atotonilco el Alto</title>
-  <meta name="description" content="Agenda tu consulta en Dental Moon Clinic &amp; Spa. Atención dental profesional, estética y bienestar en Atotonilco el Alto, Jalisco.">
+  <meta name="description"
+    content="Agenda tu consulta en Dental Moon Clinic &amp; Spa. Atención dental profesional, estética y bienestar en Atotonilco el Alto, Jalisco.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0f2148">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Dental Moon Clinic &amp; Spa | Clínica dental en Atotonilco el Alto">
-  <meta property="og:description" content="Agenda tu consulta en Dental Moon Clinic &amp; Spa. Atención dental profesional, estética y bienestar en Atotonilco el Alto, Jalisco.">
+  <meta property="og:description"
+    content="Agenda tu consulta en Dental Moon Clinic &amp; Spa. Atención dental profesional, estética y bienestar en Atotonilco el Alto, Jalisco.">
   <meta property="og:image" content="assets/images/og-image.jpg">
   <meta property="og:locale" content="es_MX">
 
@@ -25,30 +28,91 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- ═══ MODAL AVISO DE PRIVACIDAD ═══ -->
+  <div id="privacyModal" class="privacy-modal" role="dialog" aria-modal="true" aria-labelledby="privacyModalTitle" style="display:none;">
+    <div class="privacy-modal__backdrop"></div>
+    <div class="privacy-modal__box">
+      <div class="privacy-modal__icon" aria-hidden="true">🔒</div>
+      <h2 id="privacyModalTitle" class="privacy-modal__title">Aviso de privacidad</h2>
+      <p class="privacy-modal__text">
+        Para brindarte atención y responder tus solicitudes, <strong>Dental Moon Clinic &amp; Spa</strong> puede tratar datos personales como nombre, teléfono, correo y la información que compartas voluntariamente en la guía de consulta o por WhatsApp.
+      </p>
+      <p class="privacy-modal__text">
+        La guía de consulta <strong>no representa diagnóstico médico</strong> ni sustituye la valoración de un profesional de la salud dental.
+      </p>
+      <p class="privacy-modal__text">
+        Al continuar, confirmas que has leído y aceptas nuestro <strong>Aviso de Privacidad Integral</strong>.
+      </p>
+      <div class="privacy-modal__actions">
+        <a id="privacyModalRead" class="btn btn--outline" href="aviso-privacidad.html">Leer aviso de privacidad</a>
+        <button id="privacyModalAccept" class="btn btn--primary">Aceptar y continuar</button>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .privacy-modal{position:fixed;inset:0;z-index:9000;display:flex;align-items:center;justify-content:center;padding:16px;}
+    .privacy-modal__backdrop{position:absolute;inset:0;background:rgba(6,15,34,.72);backdrop-filter:blur(6px);}
+    .privacy-modal__box{position:relative;z-index:1;background:#fff;border-radius:20px;padding:36px 32px;max-width:480px;width:100%;box-shadow:0 24px 80px rgba(6,15,34,.35);animation:modalIn .3s cubic-bezier(.34,1.56,.64,1) both;}
+    @keyframes modalIn{from{opacity:0;transform:scale(.9) translateY(20px)}to{opacity:1;transform:none}}
+    .privacy-modal__icon{font-size:2.2rem;text-align:center;margin-bottom:12px;}
+    .privacy-modal__title{font-family:'Outfit',sans-serif;font-size:1.5rem;font-weight:900;color:var(--navy-900);text-align:center;margin:0 0 16px;letter-spacing:-.03em;}
+    .privacy-modal__text{font-size:.93rem;color:var(--ink-80);line-height:1.7;margin:0 0 12px;}
+    .privacy-modal__text:last-of-type{margin-bottom:0;}
+    .privacy-modal__actions{display:flex;flex-direction:column;gap:10px;margin-top:24px;}
+    .privacy-modal__actions .btn{width:100%;justify-content:center;}
+    @media(min-width:400px){.privacy-modal__actions{flex-direction:row;}.privacy-modal__actions .btn{width:auto;flex:1;}}
+    /* Wizard consent checkbox */
+    .wizard-consent{margin:20px 0 4px;padding:16px 18px;border-radius:12px;background:rgba(74,135,200,.06);border:1px solid rgba(74,135,200,.2);}
+    .wizard-consent__label{display:flex;align-items:flex-start;gap:12px;cursor:pointer;}
+    .wizard-consent__check{width:18px;height:18px;min-width:18px;margin-top:2px;accent-color:var(--blue-600);cursor:pointer;}
+    .wizard-consent__text{font-size:.88rem;color:var(--ink-80);line-height:1.6;}
+    .wizard-consent__link{color:var(--blue-600);font-weight:600;text-decoration:underline;}
+    .wizard-consent__link:hover{color:var(--navy-800);}
+    .wizard-consent__error{font-size:.84rem;color:#b91c1c;margin:8px 0 0;padding:8px 12px;border-radius:8px;background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.25);}
+  </style>
 
   <!-- TOP STRIP -->
   <div class="top-strip" role="note" aria-label="Información de contacto y horarios">
     <div class="container top-strip__inner">
       <div class="top-strip__left">
-        <a href="https://wa.me/523322436260" target="_blank" rel="noopener" class="top-strip__wa" aria-label="Contactar por WhatsApp">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.122 1.528 5.852L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.799-.517-5.389-1.42l-.387-.229-3.983 1.04 1.064-3.876-.252-.4A9.958 9.958 0 012 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
+        <a href="https://wa.me/523322436260" target="_blank" rel="noopener" class="top-strip__wa"
+          aria-label="Contactar por WhatsApp">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+            <path
+              d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.122 1.528 5.852L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.799-.517-5.389-1.42l-.387-.229-3.983 1.04 1.064-3.876-.252-.4A9.958 9.958 0 012 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z" />
+          </svg>
           +52 33 2243 6260
         </a>
         <span class="top-strip__sep">·</span>
         <span>Lun-Vie 9:00 a.m. – 8:30 p.m. &nbsp;·&nbsp; Sáb 10:00 a.m. – 4:00 p.m.</span>
       </div>
       <div class="top-strip__right">
-        <a href="https://www.instagram.com/dentalmoonclinic?igsh=MWVpZGF1cjhmemU5bw==" target="_blank" rel="noopener" aria-label="Instagram de Dental Moon Clinic">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        <a href="https://www.instagram.com/dentalmoonclinic?igsh=MWVpZGF1cjhmemU5bw==" target="_blank" rel="noopener"
+          aria-label="Instagram de Dental Moon Clinic">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+          </svg>
         </a>
-        <a href="https://www.tiktok.com/@dental.moon.clini?_r=1&_t=ZS-97T3ey4E09I" target="_blank" rel="noopener" aria-label="TikTok de Dental Moon Clinic">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34l.06-8.54a8.27 8.27 0 004.83 1.55v-3.4a4.85 4.85 0 01-1.13-.22z"/></svg>
+        <a href="https://www.tiktok.com/@dental.moon.clini?_r=1&_t=ZS-97T3ey4E09I" target="_blank" rel="noopener"
+          aria-label="TikTok de Dental Moon Clinic">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34l.06-8.54a8.27 8.27 0 004.83 1.55v-3.4a4.85 4.85 0 01-1.13-.22z" />
+          </svg>
         </a>
       </div>
     </div>
@@ -60,7 +124,8 @@
       <a class="brand" href="#inicio" aria-label="Ir al inicio de Dental Moon Clinic &amp; Spa">
         <picture>
           <source srcset="assets/logo/logo-oficial.webp" type="image/webp">
-          <img src="assets/logo/logo-oficial.jpg" alt="Logo oficial de Dental Moon Clinic &amp; Spa" width="58" height="58">
+          <img src="assets/logo/logo-oficial.jpg" alt="Logo oficial de Dental Moon Clinic &amp; Spa" width="58"
+            height="58">
         </picture>
         <span class="brand__text">
           <strong>Dental Moon</strong>
@@ -68,7 +133,8 @@
         </span>
       </a>
 
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menú">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal"
+        aria-label="Abrir menú">
         <span></span><span></span><span></span>
       </button>
 
@@ -81,8 +147,14 @@
         <a href="#contacto">Contacto</a>
       </nav>
 
-      <a class="btn btn--primary nav-cta" href="https://wa.me/523322436260" target="_blank" rel="noopener" aria-label="Agendar por WhatsApp">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.122 1.528 5.852L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.799-.517-5.389-1.42l-.387-.229-3.983 1.04 1.064-3.876-.252-.4A9.958 9.958 0 012 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
+      <a class="btn btn--primary nav-cta" href="https://wa.me/523322436260" target="_blank" rel="noopener"
+        aria-label="Agendar por WhatsApp">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+          <path
+            d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.122 1.528 5.852L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.799-.517-5.389-1.42l-.387-.229-3.983 1.04 1.064-3.876-.252-.4A9.958 9.958 0 012 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z" />
+        </svg>
         Agendar por WhatsApp
       </a>
     </div>
@@ -104,15 +176,27 @@
             Clínica dental y bienestar · Atotonilco el Alto
           </div>
           <h1 id="hero-title">Tu sonrisa,<br><span class="hero__accent">nuestra pasión.</span></h1>
-          <p class="hero__lead">En <strong>Dental Moon Clinic &amp; Spa</strong> cuidamos tu salud bucal con atención profesional, cercana y personalizada.</p>
+          <p class="hero__lead">En <strong>Dental Moon Clinic &amp; Spa</strong> cuidamos tu salud bucal con atención
+            profesional, cercana y personalizada.</p>
 
           <div class="hero__actions">
-            <a class="btn btn--wa btn--large" href="https://wa.me/523322436260?text=Hola%20Dental%20Moon%20Clinic%20%26%20Spa%2C%20quiero%20agendar%20una%20consulta." target="_blank" rel="noopener" aria-label="Agendar por WhatsApp">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.122 1.528 5.852L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.799-.517-5.389-1.42l-.387-.229-3.983 1.04 1.064-3.876-.252-.4A9.958 9.958 0 012 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
+            <a class="btn btn--wa btn--large"
+              href="https://wa.me/523322436260?text=Hola%20Dental%20Moon%20Clinic%20%26%20Spa%2C%20quiero%20agendar%20una%20consulta."
+              target="_blank" rel="noopener" aria-label="Agendar por WhatsApp">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                <path
+                  d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.122 1.528 5.852L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.799-.517-5.389-1.42l-.387-.229-3.983 1.04 1.064-3.876-.252-.4A9.958 9.958 0 012 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z" />
+              </svg>
               Agendar por WhatsApp
             </a>
             <a class="btn btn--secondary btn--large" href="#guia-consulta">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
               Guía rápida de consulta
             </a>
             <a class="btn btn--ghost btn--large" href="#ubicacion">Ver ubicación</a>
@@ -121,19 +205,35 @@
           <!-- Trust pills -->
           <div class="hero__trust">
             <span class="trust-pill">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                aria-hidden="true">
+                <path
+                  d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z">
+                </path>
+              </svg>
               Atención humana
             </span>
             <span class="trust-pill">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 8v4l3 3" />
+              </svg>
               Agenda rápida
             </span>
             <span class="trust-pill">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
               Enfoque preventivo
             </span>
             <span class="trust-pill">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
               Atotonilco el Alto, Jal.
             </span>
           </div>
@@ -142,7 +242,9 @@
         <div class="hero__visual reveal reveal--delay" aria-label="Imagen principal de Dental Moon Clinic &amp; Spa">
           <div class="hero-card">
             <div class="hero-card__glow" aria-hidden="true"></div>
-            <img src="assets/images/nuevas-autorizadas/01-hero-revision-dental.png" alt="Revisión dental en Dental Moon Clinic &amp; Spa — Tu sonrisa, nuestra pasión" width="800" height="1000" loading="eager">
+            <img src="assets/images/nuevas-autorizadas/01-hero-revision-dental.png"
+              alt="Revisión dental en Dental Moon Clinic &amp; Spa — Tu sonrisa, nuestra pasión" width="800"
+              height="1000" loading="eager">
             <div class="hero-card__badge">
               <img src="assets/icons/moon-line.svg" alt="" aria-hidden="true" width="28" height="28">
               <span>Tu sonrisa, nuestra pasión</span>
@@ -157,28 +259,45 @@
       <div class="container trust-bar__grid">
         <article class="trust-card reveal">
           <div class="trust-card__icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path></svg>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z">
+              </path>
+            </svg>
           </div>
           <strong>Atención humana</strong>
           <p>Te orientamos con un trato cercano y claro desde el primer contacto.</p>
         </article>
         <article class="trust-card reveal">
           <div class="trust-card__icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
           </div>
           <strong>Enfoque preventivo</strong>
           <p>Promovemos revisiones oportunas para cuidar tu salud bucal.</p>
         </article>
         <article class="trust-card reveal">
           <div class="trust-card__icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="4" />
+              <path d="M9 9h6M9 12h6M9 15h4" />
+            </svg>
           </div>
           <strong>Espacios clínicos</strong>
           <p>Atención en un entorno preparado para tu comodidad.</p>
         </article>
         <article class="trust-card reveal">
           <div class="trust-card__icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.122 1.528 5.852L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.799-.517-5.389-1.42l-.387-.229-3.983 1.04 1.064-3.876-.252-.4A9.958 9.958 0 012 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+              <path
+                d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.122 1.528 5.852L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.799-.517-5.389-1.42l-.387-.229-3.983 1.04 1.064-3.876-.252-.4A9.958 9.958 0 012 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z" />
+            </svg>
           </div>
           <strong>Contacto directo</strong>
           <p>Agenda y resuelve dudas de forma sencilla por WhatsApp.</p>
@@ -192,7 +311,8 @@
         <div class="section-head reveal">
           <span class="section-kicker">Servicios dentales</span>
           <h2 id="servicios-title">Cuidamos tu sonrisa en cada etapa.</h2>
-          <p>Ofrecemos atención dental integral para toda la familia. Escríbenos para consultar disponibilidad de cualquier servicio.</p>
+          <p>Ofrecemos atención dental integral para toda la familia. Escríbenos para consultar disponibilidad de
+            cualquier servicio.</p>
         </div>
 
         <div class="services-grid">
@@ -201,109 +321,133 @@
             <div class="service-card__icon">🦷</div>
             <h3>Revisión dental</h3>
             <p>Valoración inicial para conocer el estado de tu salud bucal y orientarte sobre los siguientes pasos.</p>
-            <a class="btn btn--service-wa" href="https://wa.me/523322436260?text=Hola%20Dental%20Moon%20Clinic%20%26%20Spa%2C%20quiero%20consultar%20sobre%20Revisi%C3%B3n%20dental." target="_blank" rel="noopener">Consultar por WhatsApp</a>
+            <a class="btn btn--service-wa"
+              href="https://wa.me/523322436260?text=Hola%20Dental%20Moon%20Clinic%20%26%20Spa%2C%20quiero%20consultar%20sobre%20Revisi%C3%B3n%20dental."
+              target="_blank" rel="noopener">Consultar por WhatsApp</a>
           </article>
 
           <article class="service-card reveal">
             <div class="service-card__icon">✨</div>
             <h3>Limpieza dental</h3>
             <p>Apoyo preventivo para mantener una mejor higiene bucal.</p>
-            <a class="btn btn--service-wa" href="https://wa.me/523322436260?text=Hola%20Dental%20Moon%20Clinic%20%26%20Spa%2C%20quiero%20consultar%20sobre%20Limpieza%20dental." target="_blank" rel="noopener">Consultar por WhatsApp</a>
+            <a class="btn btn--service-wa"
+              href="https://wa.me/523322436260?text=Hola%20Dental%20Moon%20Clinic%20%26%20Spa%2C%20quiero%20consultar%20sobre%20Limpieza%20dental."
+              target="_blank" rel="noopener">Consultar por WhatsApp</a>
           </article>
 
           <article class="service-card reveal">
             <div class="service-card__icon">🌟</div>
             <h3>Blanqueamiento dental</h3>
             <p>Opción estética para mejorar el aspecto de tu sonrisa, previa valoración.</p>
-            <a class="btn btn--service-wa" href="https://wa.me/523322436260?text=Hola%20Dental%20Moon%20Clinic%20%26%20Spa%2C%20quiero%20consultar%20sobre%20Blanqueamiento%20dental." target="_blank" rel="noopener">Consultar por WhatsApp</a>
+            <a class="btn btn--service-wa"
+              href="https://wa.me/523322436260?text=Hola%20Dental%20Moon%20Clinic%20%26%20Spa%2C%20quiero%20consultar%20sobre%20Blanqueamiento%20dental."
+              target="_blank" rel="noopener">Consultar por WhatsApp</a>
           </article>
 
           <article class="service-card reveal">
             <div class="service-card__icon">🔬</div>
             <h3>Resinas y restauraciones</h3>
             <p>Alternativas para tratar piezas dentales afectadas, según valoración profesional.</p>
-            <a class="btn btn--service-wa" href="https://wa.me/523322436260?text=Hola%20Dental%20Moon%20Clinic%20%26%20Spa%2C%20quiero%20consultar%20sobre%20Resinas%20y%20restauraciones." target="_blank" rel="noopener">Consultar por WhatsApp</a>
+            <a class="btn btn--service-wa"
+              href="https://wa.me/523322436260?text=Hola%20Dental%20Moon%20Clinic%20%26%20Spa%2C%20quiero%20consultar%20sobre%20Resinas%20y%20restauraciones."
+              target="_blank" rel="noopener">Consultar por WhatsApp</a>
           </article>
 
           <article class="service-card reveal">
             <div class="service-card__icon">
-              <svg width="26" height="26" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
                 <!-- Fila superior de dientes -->
-                <rect x="4"  y="10" width="10" height="14" rx="3" fill="currentColor" opacity="0.9"/>
-                <rect x="16" y="8"  width="12" height="16" rx="3" fill="currentColor"/>
-                <rect x="30" y="8"  width="12" height="16" rx="3" fill="currentColor"/>
-                <rect x="44" y="8"  width="10" height="16" rx="3" fill="currentColor"/>
+                <rect x="4" y="10" width="10" height="14" rx="3" fill="currentColor" opacity="0.9" />
+                <rect x="16" y="8" width="12" height="16" rx="3" fill="currentColor" />
+                <rect x="30" y="8" width="12" height="16" rx="3" fill="currentColor" />
+                <rect x="44" y="8" width="10" height="16" rx="3" fill="currentColor" />
                 <!-- Base de la dentadura superior -->
-                <path d="M2 22 Q32 30 62 22 L60 26 Q32 34 4 26 Z" fill="currentColor" opacity="0.55"/>
+                <path d="M2 22 Q32 30 62 22 L60 26 Q32 34 4 26 Z" fill="currentColor" opacity="0.55" />
                 <!-- Fila inferior de dientes -->
-                <rect x="4"  y="38" width="10" height="14" rx="3" fill="currentColor" opacity="0.9"/>
-                <rect x="16" y="40" width="12" height="16" rx="3" fill="currentColor"/>
-                <rect x="30" y="40" width="12" height="16" rx="3" fill="currentColor"/>
-                <rect x="44" y="38" width="10" height="16" rx="3" fill="currentColor"/>
+                <rect x="4" y="38" width="10" height="14" rx="3" fill="currentColor" opacity="0.9" />
+                <rect x="16" y="40" width="12" height="16" rx="3" fill="currentColor" />
+                <rect x="30" y="40" width="12" height="16" rx="3" fill="currentColor" />
+                <rect x="44" y="38" width="10" height="16" rx="3" fill="currentColor" />
                 <!-- Base de la dentadura inferior -->
-                <path d="M2 40 Q32 32 62 40 L60 36 Q32 28 4 36 Z" fill="currentColor" opacity="0.55"/>
+                <path d="M2 40 Q32 32 62 40 L60 36 Q32 28 4 36 Z" fill="currentColor" opacity="0.55" />
               </svg>
             </div>
             <h3>Prótesis dentales</h3>
             <p>Opciones para recuperar funcionalidad y estética dental, según cada caso.</p>
-            <a class="btn btn--service-wa" href="https://wa.me/523322436260?text=Hola%20Dental%20Moon%20Clinic%20%26%20Spa%2C%20quiero%20consultar%20sobre%20Pr%C3%B3tesis%20dentales." target="_blank" rel="noopener">Consultar por WhatsApp</a>
+            <a class="btn btn--service-wa"
+              href="https://wa.me/523322436260?text=Hola%20Dental%20Moon%20Clinic%20%26%20Spa%2C%20quiero%20consultar%20sobre%20Pr%C3%B3tesis%20dentales."
+              target="_blank" rel="noopener">Consultar por WhatsApp</a>
           </article>
 
           <article class="service-card reveal">
             <div class="service-card__icon">😁</div>
             <h3>Ortodoncia o alineadores</h3>
             <p>Orientación para mejorar la posición dental mediante alternativas indicadas por valoración.</p>
-            <a class="btn btn--service-wa" href="https://wa.me/523322436260?text=Hola%20Dental%20Moon%20Clinic%20%26%20Spa%2C%20quiero%20consultar%20sobre%20Ortodoncia%20o%20alineadores." target="_blank" rel="noopener">Consultar por WhatsApp</a>
+            <a class="btn btn--service-wa"
+              href="https://wa.me/523322436260?text=Hola%20Dental%20Moon%20Clinic%20%26%20Spa%2C%20quiero%20consultar%20sobre%20Ortodoncia%20o%20alineadores."
+              target="_blank" rel="noopener">Consultar por WhatsApp</a>
           </article>
 
           <article class="service-card reveal">
             <div class="service-card__icon">🚨</div>
             <h3>Urgencias dentales</h3>
             <p>Atención sujeta a disponibilidad para molestias o situaciones que requieren revisión pronta.</p>
-            <a class="btn btn--service-wa" href="https://wa.me/523322436260?text=Hola%20Dental%20Moon%20Clinic%20%26%20Spa%2C%20tengo%20una%20urgencia%20dental%20y%20necesito%20atenci%C3%B3n." target="_blank" rel="noopener">Consultar por WhatsApp</a>
+            <a class="btn btn--service-wa"
+              href="https://wa.me/523322436260?text=Hola%20Dental%20Moon%20Clinic%20%26%20Spa%2C%20tengo%20una%20urgencia%20dental%20y%20necesito%20atenci%C3%B3n."
+              target="_blank" rel="noopener">Consultar por WhatsApp</a>
           </article>
 
           <article class="service-card reveal">
             <div class="service-card__icon">
-              <svg width="24" height="28" viewBox="0 0 48 56" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <svg width="24" height="28" viewBox="0 0 48 56" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
                 <!-- Corona del implante (parte superior redondeada) -->
-                <rect x="10" y="2" width="28" height="16" rx="8" fill="currentColor"/>
+                <rect x="10" y="2" width="28" height="16" rx="8" fill="currentColor" />
                 <!-- Cuello del implante -->
-                <rect x="16" y="17" width="16" height="6" rx="2" fill="currentColor" opacity="0.8"/>
+                <rect x="16" y="17" width="16" height="6" rx="2" fill="currentColor" opacity="0.8" />
                 <!-- Cuerpo del tornillo -->
-                <rect x="18" y="22" width="12" height="22" rx="2" fill="currentColor" opacity="0.9"/>
+                <rect x="18" y="22" width="12" height="22" rx="2" fill="currentColor" opacity="0.9" />
                 <!-- Roscas del tornillo -->
-                <rect x="15" y="26" width="18" height="3" rx="1.5" fill="currentColor" opacity="0.65"/>
-                <rect x="15" y="31" width="18" height="3" rx="1.5" fill="currentColor" opacity="0.65"/>
-                <rect x="15" y="36" width="18" height="3" rx="1.5" fill="currentColor" opacity="0.65"/>
+                <rect x="15" y="26" width="18" height="3" rx="1.5" fill="currentColor" opacity="0.65" />
+                <rect x="15" y="31" width="18" height="3" rx="1.5" fill="currentColor" opacity="0.65" />
+                <rect x="15" y="36" width="18" height="3" rx="1.5" fill="currentColor" opacity="0.65" />
                 <!-- Punta del tornillo -->
-                <path d="M18 44 L24 54 L30 44 Z" fill="currentColor" opacity="0.75"/>
+                <path d="M18 44 L24 54 L30 44 Z" fill="currentColor" opacity="0.75" />
               </svg>
             </div>
             <h3>Implantes dentales</h3>
             <p>Alternativa de rehabilitación dental que requiere valoración personalizada.</p>
-            <a class="btn btn--service-wa" href="https://wa.me/523322436260?text=Hola%20Dental%20Moon%20Clinic%20%26%20Spa%2C%20quiero%20consultar%20sobre%20Implantes%20dentales." target="_blank" rel="noopener">Consultar por WhatsApp</a>
+            <a class="btn btn--service-wa"
+              href="https://wa.me/523322436260?text=Hola%20Dental%20Moon%20Clinic%20%26%20Spa%2C%20quiero%20consultar%20sobre%20Implantes%20dentales."
+              target="_blank" rel="noopener">Consultar por WhatsApp</a>
           </article>
 
           <article class="service-card reveal">
             <div class="service-card__icon">⚕️</div>
             <h3>Cirugías de muelas de juicio</h3>
             <p>Valoración y orientación para casos relacionados con terceros molares.</p>
-            <a class="btn btn--service-wa" href="https://wa.me/523322436260?text=Hola%20Dental%20Moon%20Clinic%20%26%20Spa%2C%20quiero%20consultar%20sobre%20Cirug%C3%ADas%20de%20muelas%20de%20juicio." target="_blank" rel="noopener">Consultar por WhatsApp</a>
+            <a class="btn btn--service-wa"
+              href="https://wa.me/523322436260?text=Hola%20Dental%20Moon%20Clinic%20%26%20Spa%2C%20quiero%20consultar%20sobre%20Cirug%C3%ADas%20de%20muelas%20de%20juicio."
+              target="_blank" rel="noopener">Consultar por WhatsApp</a>
           </article>
 
           <article class="service-card reveal">
             <div class="service-card__icon">💎</div>
             <h3>Carillas dentales</h3>
             <p>Opción estética que debe evaluarse de acuerdo con cada sonrisa.</p>
-            <a class="btn btn--service-wa" href="https://wa.me/523322436260?text=Hola%20Dental%20Moon%20Clinic%20%26%20Spa%2C%20quiero%20consultar%20sobre%20Carillas%20dentales." target="_blank" rel="noopener">Consultar por WhatsApp</a>
+            <a class="btn btn--service-wa"
+              href="https://wa.me/523322436260?text=Hola%20Dental%20Moon%20Clinic%20%26%20Spa%2C%20quiero%20consultar%20sobre%20Carillas%20dentales."
+              target="_blank" rel="noopener">Consultar por WhatsApp</a>
           </article>
 
           <article class="service-card reveal">
             <div class="service-card__icon">🧒</div>
             <h3>Odontopediatría</h3>
             <p>Atención dental para niñas y niños con enfoque cercano y cuidadoso.</p>
-            <a class="btn btn--service-wa" href="https://wa.me/523322436260?text=Hola%20Dental%20Moon%20Clinic%20%26%20Spa%2C%20quiero%20consultar%20sobre%20Odontopediatr%C3%ADa." target="_blank" rel="noopener">Consultar por WhatsApp</a>
+            <a class="btn btn--service-wa"
+              href="https://wa.me/523322436260?text=Hola%20Dental%20Moon%20Clinic%20%26%20Spa%2C%20quiero%20consultar%20sobre%20Odontopediatr%C3%ADa."
+              target="_blank" rel="noopener">Consultar por WhatsApp</a>
           </article>
 
           <!-- CTA card -->
@@ -311,7 +455,9 @@
             <div class="service-card__icon">💬</div>
             <h3>¿No encuentras lo que buscas?</h3>
             <p>Escríbenos directamente y con gusto te orientamos sobre tu caso.</p>
-            <a class="btn btn--primary btn--full" href="https://wa.me/523322436260?text=Hola%20Dental%20Moon%20Clinic%20%26%20Spa%2C%20tengo%20una%20consulta." target="_blank" rel="noopener">Agendar por WhatsApp</a>
+            <a class="btn btn--primary btn--full"
+              href="https://wa.me/523322436260?text=Hola%20Dental%20Moon%20Clinic%20%26%20Spa%2C%20tengo%20una%20consulta."
+              target="_blank" rel="noopener">Agendar por WhatsApp</a>
           </article>
 
         </div>
@@ -362,16 +508,32 @@
               <div class="wizard-fields">
                 <label class="field-label" for="w-nombre">
                   Nombre completo <span class="field-required" aria-label="requerido">*</span>
-                  <input class="field-input" type="text" id="w-nombre" name="nombre" autocomplete="name" placeholder="Escribe tu nombre">
+                  <input class="field-input" type="text" id="w-nombre" name="nombre" autocomplete="name"
+                    placeholder="Escribe tu nombre">
                 </label>
                 <label class="field-label" for="w-telefono">
                   Teléfono <span class="field-required" aria-label="requerido">*</span>
-                  <input class="field-input" type="tel" id="w-telefono" name="telefono" autocomplete="tel" placeholder="Tu número de contacto">
+                  <input class="field-input" type="tel" id="w-telefono" name="telefono" autocomplete="tel"
+                    placeholder="Tu número de contacto">
                 </label>
               </div>
+
+              <!-- Checkbox de consentimiento de privacidad -->
+              <div class="wizard-consent" id="wizardConsentWrap">
+                <label class="wizard-consent__label" for="w-privacy-consent" id="privacyConsentLabel">
+                  <input type="checkbox" id="w-privacy-consent" name="privacy_consent" class="wizard-consent__check">
+                  <span class="wizard-consent__text">
+                    He leído y acepto el
+                    <a href="aviso-privacidad.html" target="_blank" rel="noopener" class="wizard-consent__link">Aviso de Privacidad Integral</a>
+                    de Dental Moon Clinic &amp; Spa y otorgo mi consentimiento expreso para el tratamiento de mis datos personales, incluidos los datos de salud que proporcione en esta guía, exclusivamente para recibir orientación y agendar mi consulta odontológica.
+                  </span>
+                </label>
+                <p class="wizard-consent__error" id="privacyConsentError" role="alert" style="display:none;">⚠️ Para continuar, primero acepta el Aviso de Privacidad Integral.</p>
+              </div>
+
               <div class="wizard-nav">
                 <span></span>
-                <button class="btn btn--primary" type="button" data-next="2">Siguiente →</button>
+                <button class="btn btn--primary" type="button" id="wizardNextStep1">Siguiente →</button>
               </div>
             </div>
 
@@ -383,17 +545,28 @@
               </h3>
 
               <div class="wizard-chips" role="group" aria-label="Tipo de consulta">
-                <label class="chip"><input type="radio" name="tipo_consulta" value="Revisión dental"><span>🦷 Revisión dental</span></label>
-                <label class="chip"><input type="radio" name="tipo_consulta" value="Limpieza dental"><span>✨ Limpieza dental</span></label>
-                <label class="chip"><input type="radio" name="tipo_consulta" value="Blanqueamiento dental"><span>🌟 Blanqueamiento</span></label>
-                <label class="chip"><input type="radio" name="tipo_consulta" value="Dolor dental"><span>😬 Dolor dental</span></label>
-                <label class="chip"><input type="radio" name="tipo_consulta" value="Ortodoncia o alineadores"><span>😁 Ortodoncia</span></label>
-                <label class="chip"><input type="radio" name="tipo_consulta" value="Carillas dentales"><span>💎 Carillas</span></label>
-                <label class="chip"><input type="radio" name="tipo_consulta" value="Prótesis dental"><span>🦿 Prótesis</span></label>
-                <label class="chip"><input type="radio" name="tipo_consulta" value="Implante dental"><span>🌙 Implante</span></label>
-                <label class="chip"><input type="radio" name="tipo_consulta" value="Muelas del juicio"><span>⚕️ Muelas del juicio</span></label>
-                <label class="chip"><input type="radio" name="tipo_consulta" value="Odontopediatría"><span>🧒 Odontopediatría</span></label>
-                <label class="chip"><input type="radio" name="tipo_consulta" value="Urgencia dental"><span>🚨 Urgencia dental</span></label>
+                <label class="chip"><input type="radio" name="tipo_consulta" value="Revisión dental"><span>🦷 Revisión
+                    dental</span></label>
+                <label class="chip"><input type="radio" name="tipo_consulta" value="Limpieza dental"><span>✨ Limpieza
+                    dental</span></label>
+                <label class="chip"><input type="radio" name="tipo_consulta" value="Blanqueamiento dental"><span>🌟
+                    Blanqueamiento</span></label>
+                <label class="chip"><input type="radio" name="tipo_consulta" value="Dolor dental"><span>😬 Dolor
+                    dental</span></label>
+                <label class="chip"><input type="radio" name="tipo_consulta" value="Ortodoncia o alineadores"><span>😁
+                    Ortodoncia</span></label>
+                <label class="chip"><input type="radio" name="tipo_consulta" value="Carillas dentales"><span>💎
+                    Carillas</span></label>
+                <label class="chip"><input type="radio" name="tipo_consulta" value="Prótesis dental"><span>🦿
+                    Prótesis</span></label>
+                <label class="chip"><input type="radio" name="tipo_consulta" value="Implante dental"><span>🌙
+                    Implante</span></label>
+                <label class="chip"><input type="radio" name="tipo_consulta" value="Muelas del juicio"><span>⚕️ Muelas
+                    del juicio</span></label>
+                <label class="chip"><input type="radio" name="tipo_consulta" value="Odontopediatría"><span>🧒
+                    Odontopediatría</span></label>
+                <label class="chip"><input type="radio" name="tipo_consulta" value="Urgencia dental"><span>🚨 Urgencia
+                    dental</span></label>
                 <label class="chip"><input type="radio" name="tipo_consulta" value="Otro"><span>💬 Otro</span></label>
               </div>
 
@@ -457,26 +630,37 @@
               <fieldset class="symptom-fieldset">
                 <legend>Síntomas o motivo (selecciona los que apliquen)</legend>
                 <div class="symptom-chips">
-                  <label class="chip chip--check"><input type="checkbox" name="sintomas" value="Dolor"><span>😖 Dolor</span></label>
-                  <label class="chip chip--check"><input type="checkbox" name="sintomas" value="Sensibilidad"><span>🌡️ Sensibilidad</span></label>
-                  <label class="chip chip--check"><input type="checkbox" name="sintomas" value="Inflamación"><span>🔴 Inflamación</span></label>
-                  <label class="chip chip--check"><input type="checkbox" name="sintomas" value="Sangrado"><span>🩸 Sangrado</span></label>
-                  <label class="chip chip--check"><input type="checkbox" name="sintomas" value="Fractura"><span>💔 Fractura</span></label>
-                  <label class="chip chip--check"><input type="checkbox" name="sintomas" value="Revisión preventiva"><span>🔍 Revisión preventiva</span></label>
-                  <label class="chip chip--check"><input type="checkbox" name="sintomas" value="Estética dental"><span>✨ Estética dental</span></label>
-                  <label class="chip chip--check"><input type="checkbox" name="sintomas" value="Consulta para niño/a"><span>🧒 Consulta para niño/a</span></label>
-                  <label class="chip chip--check"><input type="checkbox" name="sintomas" value="Otro"><span>💬 Otro</span></label>
+                  <label class="chip chip--check"><input type="checkbox" name="sintomas" value="Dolor"><span>😖
+                      Dolor</span></label>
+                  <label class="chip chip--check"><input type="checkbox" name="sintomas" value="Sensibilidad"><span>🌡️
+                      Sensibilidad</span></label>
+                  <label class="chip chip--check"><input type="checkbox" name="sintomas" value="Inflamación"><span>🔴
+                      Inflamación</span></label>
+                  <label class="chip chip--check"><input type="checkbox" name="sintomas" value="Sangrado"><span>🩸
+                      Sangrado</span></label>
+                  <label class="chip chip--check"><input type="checkbox" name="sintomas" value="Fractura"><span>💔
+                      Fractura</span></label>
+                  <label class="chip chip--check"><input type="checkbox" name="sintomas"
+                      value="Revisión preventiva"><span>🔍 Revisión preventiva</span></label>
+                  <label class="chip chip--check"><input type="checkbox" name="sintomas" value="Estética dental"><span>✨
+                      Estética dental</span></label>
+                  <label class="chip chip--check"><input type="checkbox" name="sintomas"
+                      value="Consulta para niño/a"><span>🧒 Consulta para niño/a</span></label>
+                  <label class="chip chip--check"><input type="checkbox" name="sintomas" value="Otro"><span>💬
+                      Otro</span></label>
                 </div>
               </fieldset>
 
               <label class="field-label" for="w-comentarios">
                 Comentarios adicionales
-                <textarea class="field-input" id="w-comentarios" name="comentarios" rows="3" placeholder="Describe brevemente qué sucede o qué tratamiento estás buscando"></textarea>
+                <textarea class="field-input" id="w-comentarios" name="comentarios" rows="3"
+                  placeholder="Describe brevemente qué sucede o qué tratamiento estás buscando"></textarea>
               </label>
 
               <div class="wizard-nav">
                 <button class="btn btn--ghost" type="button" data-prev="2">← Anterior</button>
-                <button class="btn btn--primary" type="button" id="generateWizard" data-next="4">Generar mensaje →</button>
+                <button class="btn btn--primary" type="button" id="generateWizard" data-next="4">Generar mensaje
+                  →</button>
               </div>
             </div>
 
@@ -488,20 +672,37 @@
               </h3>
               <p class="wizard-desc">Revisa el mensaje y envíalo directo por WhatsApp.</p>
 
-              <div class="message-preview" id="messagePreview" aria-live="polite" aria-label="Vista previa del mensaje"></div>
+              <div class="message-preview" id="messagePreview" aria-live="polite" aria-label="Vista previa del mensaje">
+              </div>
 
               <div class="wizard-notice" role="note">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                <span>Esta guía no sustituye una consulta profesional ni representa un diagnóstico médico. La valoración final debe realizarla un profesional de la salud dental.</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="12" y1="8" x2="12" y2="12" />
+                  <line x1="12" y1="16" x2="12.01" y2="16" />
+                </svg>
+                <span>Esta guía no sustituye una consulta profesional ni representa un diagnóstico médico. La valoración
+                  final debe realizarla un profesional de la salud dental.</span>
               </div>
 
               <div class="wizard-actions">
-                <a class="btn btn--wa btn--full" id="sendWizard" href="#" target="_blank" rel="noopener" aria-label="Enviar por WhatsApp">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.122 1.528 5.852L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.799-.517-5.389-1.42l-.387-.229-3.983 1.04 1.064-3.876-.252-.4A9.958 9.958 0 012 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
+                <a class="btn btn--wa btn--full" id="sendWizard" href="#" target="_blank" rel="noopener"
+                  aria-label="Enviar por WhatsApp">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                    <path
+                      d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.122 1.528 5.852L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.799-.517-5.389-1.42l-.387-.229-3.983 1.04 1.064-3.876-.252-.4A9.958 9.958 0 012 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z" />
+                  </svg>
                   Enviar por WhatsApp
                 </a>
                 <button class="btn btn--outline" type="button" id="copyWizard">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"></path></svg>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    aria-hidden="true">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"></path>
+                  </svg>
                   Copiar mensaje
                 </button>
                 <button class="btn btn--ghost" type="button" data-prev="3">← Editar</button>
@@ -525,37 +726,45 @@
         <div class="gallery-grid">
 
           <figure class="gallery-item gallery-item--tall reveal" aria-label="Imagen de consulta de revisión dental">
-            <img src="assets/images/nuevas-autorizadas/01-hero-revision-dental.png" alt="Revisión dental en Dental Moon Clinic &amp; Spa" loading="lazy" width="800" height="1000">
+            <img src="assets/images/nuevas-autorizadas/01-hero-revision-dental.png"
+              alt="Revisión dental en Dental Moon Clinic &amp; Spa" loading="lazy" width="800" height="1000">
             <figcaption>Revisión dental</figcaption>
           </figure>
 
           <figure class="gallery-item reveal" aria-label="Imagen de agenda de consulta">
-            <img src="assets/images/nuevas-autorizadas/02-agenda-consulta.png" alt="Agenda tu consulta en Dental Moon Clinic &amp; Spa" loading="lazy" width="800" height="600">
+            <img src="assets/images/nuevas-autorizadas/02-agenda-consulta.png"
+              alt="Agenda tu consulta en Dental Moon Clinic &amp; Spa" loading="lazy" width="800" height="600">
             <figcaption>Agenda tu consulta</figcaption>
           </figure>
 
           <figure class="gallery-item reveal" aria-label="Imagen del equipo de la clínica">
-            <img src="assets/images/nuevas-autorizadas/03-equipo-clinica.png" alt="Equipo de Dental Moon Clinic &amp; Spa" loading="lazy" width="800" height="600">
+            <img src="assets/images/nuevas-autorizadas/03-equipo-clinica.png"
+              alt="Equipo de Dental Moon Clinic &amp; Spa" loading="lazy" width="800" height="600">
             <figcaption>Nuestro equipo</figcaption>
           </figure>
 
           <figure class="gallery-item reveal" aria-label="Imagen de ortodoncia">
-            <img src="assets/images/nuevas-autorizadas/04-ortodoncia-agenda.png" alt="Ortodoncia en Dental Moon Clinic &amp; Spa" loading="lazy" width="800" height="600">
+            <img src="assets/images/nuevas-autorizadas/04-ortodoncia-agenda.png"
+              alt="Ortodoncia en Dental Moon Clinic &amp; Spa" loading="lazy" width="800" height="600">
             <figcaption>Ortodoncia y alineadores</figcaption>
           </figure>
 
           <figure class="gallery-item reveal" aria-label="Imagen de prótesis dental">
-            <img src="assets/images/nuevas-autorizadas/05-protesis-dental.png" alt="Prótesis dental en Dental Moon Clinic &amp; Spa" loading="lazy" width="800" height="600">
+            <img src="assets/images/nuevas-autorizadas/05-protesis-dental.png"
+              alt="Prótesis dental en Dental Moon Clinic &amp; Spa" loading="lazy" width="800" height="600">
             <figcaption>Prótesis dental</figcaption>
           </figure>
 
           <figure class="gallery-item reveal" aria-label="Fachada de la clínica">
-            <img src="assets/images/nuevas-autorizadas/06-fachada-clinica.png" alt="Fachada de Dental Moon Clinic &amp; Spa en Atotonilco el Alto" loading="lazy" width="800" height="600">
+            <img src="assets/images/nuevas-autorizadas/06-fachada-clinica.png"
+              alt="Fachada de Dental Moon Clinic &amp; Spa en Atotonilco el Alto" loading="lazy" width="800"
+              height="600">
             <figcaption>Nuestra clínica</figcaption>
           </figure>
 
           <figure class="gallery-item gallery-item--wide reveal" aria-label="Atención en clínica">
-            <img src="assets/images/nuevas-autorizadas/07-atencion-clinica.png" alt="Atención personalizada en Dental Moon Clinic &amp; Spa" loading="lazy" width="1200" height="600">
+            <img src="assets/images/nuevas-autorizadas/07-atencion-clinica.png"
+              alt="Atención personalizada en Dental Moon Clinic &amp; Spa" loading="lazy" width="1200" height="600">
             <figcaption>Atención personalizada</figcaption>
           </figure>
 
@@ -602,8 +811,15 @@
           </article>
         </div>
         <div class="process-cta reveal">
-          <a class="btn btn--wa btn--large" href="https://wa.me/523322436260?text=Hola%20Dental%20Moon%20Clinic%20%26%20Spa%2C%20quiero%20agendar%20una%20consulta." target="_blank" rel="noopener">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.122 1.528 5.852L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.799-.517-5.389-1.42l-.387-.229-3.983 1.04 1.064-3.876-.252-.4A9.958 9.958 0 012 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
+          <a class="btn btn--wa btn--large"
+            href="https://wa.me/523322436260?text=Hola%20Dental%20Moon%20Clinic%20%26%20Spa%2C%20quiero%20agendar%20una%20consulta."
+            target="_blank" rel="noopener">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+              <path
+                d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.122 1.528 5.852L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.799-.517-5.389-1.42l-.387-.229-3.983 1.04 1.064-3.876-.252-.4A9.958 9.958 0 012 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z" />
+            </svg>
             Quiero una cita
           </a>
         </div>
@@ -620,7 +836,11 @@
           <div class="location-cards">
             <div class="location-card">
               <div class="location-card__icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  aria-hidden="true">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
               </div>
               <div>
                 <strong>Dirección</strong>
@@ -629,16 +849,26 @@
             </div>
             <div class="location-card">
               <div class="location-card__icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                  aria-hidden="true">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 6v6l4 2" />
+                </svg>
               </div>
               <div>
                 <strong>Horarios de atención</strong>
-                <p>Lunes a viernes: 9:00 a.m. – 8:30 p.m.<br>Sábado: 10:00 a.m. – 4:00 p.m.<br><em>Domingo: cerrado</em></p>
+                <p>Lunes a viernes: 9:00 a.m. – 8:30 p.m.<br>Sábado: 10:00 a.m. – 4:00 p.m.<br><em>Domingo: cerrado</em>
+                </p>
               </div>
             </div>
             <div class="location-card">
               <div class="location-card__icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.122 1.528 5.852L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.799-.517-5.389-1.42l-.387-.229-3.983 1.04 1.064-3.876-.252-.4A9.958 9.958 0 012 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                  <path
+                    d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.122 1.528 5.852L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.799-.517-5.389-1.42l-.387-.229-3.983 1.04 1.064-3.876-.252-.4A9.958 9.958 0 012 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z" />
+                </svg>
               </div>
               <div>
                 <strong>WhatsApp</strong>
@@ -648,20 +878,41 @@
           </div>
 
           <div class="location__actions">
-            <a class="btn btn--wa" href="https://wa.me/523322436260?text=Hola%20Dental%20Moon%20Clinic%20%26%20Spa%2C%20quiero%20agendar%20una%20consulta." target="_blank" rel="noopener">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.122 1.528 5.852L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.799-.517-5.389-1.42l-.387-.229-3.983 1.04 1.064-3.876-.252-.4A9.958 9.958 0 012 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
+            <a class="btn btn--wa"
+              href="https://wa.me/523322436260?text=Hola%20Dental%20Moon%20Clinic%20%26%20Spa%2C%20quiero%20agendar%20una%20consulta."
+              target="_blank" rel="noopener">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                <path
+                  d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.122 1.528 5.852L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.799-.517-5.389-1.42l-.387-.229-3.983 1.04 1.064-3.876-.252-.4A9.958 9.958 0 012 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z" />
+              </svg>
               Agendar por WhatsApp
             </a>
-            <a class="btn btn--outline-light" href="#" data-map-link aria-label="Cómo llegar a Dental Moon Clinic &amp; Spa">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            <a class="btn btn--outline-light" href="#" data-map-link
+              aria-label="Cómo llegar a Dental Moon Clinic &amp; Spa">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                aria-hidden="true">
+                <path
+                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+              </svg>
               Cómo llegar
             </a>
-            <a class="btn btn--outline-light" href="https://www.instagram.com/dentalmoonclinic?igsh=MWVpZGF1cjhmemU5bw==" target="_blank" rel="noopener" aria-label="Instagram de Dental Moon Clinic">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <a class="btn btn--outline-light"
+              href="https://www.instagram.com/dentalmoonclinic?igsh=MWVpZGF1cjhmemU5bw==" target="_blank" rel="noopener"
+              aria-label="Instagram de Dental Moon Clinic">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
               Instagram
             </a>
-            <a class="btn btn--outline-light" href="https://www.tiktok.com/@dental.moon.clini?_r=1&_t=ZS-97T3ey4E09I" target="_blank" rel="noopener" aria-label="TikTok de Dental Moon Clinic">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34l.06-8.54a8.27 8.27 0 004.83 1.55v-3.4a4.85 4.85 0 01-1.13-.22z"/></svg>
+            <a class="btn btn--outline-light" href="https://www.tiktok.com/@dental.moon.clini?_r=1&_t=ZS-97T3ey4E09I"
+              target="_blank" rel="noopener" aria-label="TikTok de Dental Moon Clinic">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34l.06-8.54a8.27 8.27 0 004.83 1.55v-3.4a4.85 4.85 0 01-1.13-.22z" />
+              </svg>
               TikTok
             </a>
           </div>
@@ -669,9 +920,15 @@
 
         <div class="location__visual reveal reveal--delay" aria-label="Imagen de la clínica">
           <div class="location-img-card">
-            <img src="assets/images/nuevas-autorizadas/06-fachada-clinica.png" alt="Fachada de Dental Moon Clinic &amp; Spa en Atotonilco el Alto, Jalisco" loading="lazy" width="800" height="900">
+            <img src="assets/images/nuevas-autorizadas/06-fachada-clinica.png"
+              alt="Fachada de Dental Moon Clinic &amp; Spa en Atotonilco el Alto, Jalisco" loading="lazy" width="800"
+              height="900">
             <div class="location-img-card__overlay">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
               <div>
                 <strong>Dental Moon Clinic &amp; Spa</strong>
                 <span>Valle de la Uva 5 · Atotonilco el Alto, Jal.</span>
@@ -690,8 +947,15 @@
           <span class="section-kicker">Preguntas frecuentes</span>
           <h2 id="faq-title">Respuestas claras antes de agendar.</h2>
           <p>¿Tienes dudas? Aquí encontrarás las respuestas más comunes.</p>
-          <a class="btn btn--wa" href="https://wa.me/523322436260?text=Hola%20Dental%20Moon%20Clinic%20%26%20Spa%2C%20tengo%20una%20pregunta." target="_blank" rel="noopener" style="margin-top:1.5rem">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.122 1.528 5.852L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.799-.517-5.389-1.42l-.387-.229-3.983 1.04 1.064-3.876-.252-.4A9.958 9.958 0 012 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
+          <a class="btn btn--wa"
+            href="https://wa.me/523322436260?text=Hola%20Dental%20Moon%20Clinic%20%26%20Spa%2C%20tengo%20una%20pregunta."
+            target="_blank" rel="noopener" style="margin-top:1.5rem">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+              <path
+                d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.122 1.528 5.852L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.799-.517-5.389-1.42l-.387-.229-3.983 1.04 1.064-3.876-.252-.4A9.958 9.958 0 012 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z" />
+            </svg>
             Enviar pregunta
           </a>
         </div>
@@ -699,19 +963,23 @@
         <div class="faq-list reveal reveal--delay">
           <details open>
             <summary>¿Puedo agendar por WhatsApp?</summary>
-            <p>Sí, puedes escribir directamente al WhatsApp <strong>+52 33 2243 6260</strong> para solicitar disponibilidad y compartir el motivo de tu consulta.</p>
+            <p>Sí, puedes escribir directamente al WhatsApp <strong>+52 33 2243 6260</strong> para solicitar
+              disponibilidad y compartir el motivo de tu consulta.</p>
           </details>
           <details>
             <summary>¿La guía de consulta es un diagnóstico?</summary>
-            <p>No. La guía solo ayuda a preparar tu mensaje. La valoración final debe realizarla un profesional de la salud dental.</p>
+            <p>No. La guía solo ayuda a preparar tu mensaje. La valoración final debe realizarla un profesional de la
+              salud dental.</p>
           </details>
           <details>
             <summary>¿Qué servicios ofrecen?</summary>
-            <p>Revisión dental, limpieza, blanqueamiento, resinas, prótesis dentales, ortodoncia o alineadores, urgencias dentales, implantes, cirugías de muelas de juicio, carillas dentales y odontopediatría.</p>
+            <p>Revisión dental, limpieza, blanqueamiento, resinas, prótesis dentales, ortodoncia o alineadores,
+              urgencias dentales, implantes, cirugías de muelas de juicio, carillas dentales y odontopediatría.</p>
           </details>
           <details>
             <summary>¿Dónde se ubica la clínica?</summary>
-            <p>Valle de la Uva 5, La Selva, 47750 Atotonilco el Alto, Jal. El enlace de Google Maps está pendiente por confirmar.</p>
+            <p>Valle de la Uva 5, La Selva, 47750 Atotonilco el Alto, Jal. El enlace de Google Maps está pendiente por
+              confirmar.</p>
           </details>
           <details>
             <summary>¿Cuál es el horario de atención?</summary>
@@ -719,7 +987,8 @@
           </details>
           <details>
             <summary>¿Atienden urgencias dentales?</summary>
-            <p>El servicio de urgencias dentales está confirmado. Para disponibilidad inmediata, se recomienda escribir directamente por WhatsApp al <strong>+52 33 2243 6260</strong>.</p>
+            <p>El servicio de urgencias dentales está confirmado. Para disponibilidad inmediata, se recomienda escribir
+              directamente por WhatsApp al <strong>+52 33 2243 6260</strong>.</p>
           </details>
         </div>
       </div>
@@ -735,25 +1004,43 @@
         <div class="cta-content reveal">
           <span class="section-kicker section-kicker--light">Agenda hoy</span>
           <h2 id="contacto-title">Agenda tu consulta hoy.</h2>
-          <p>Escríbenos por WhatsApp y cuéntanos qué necesitas. Te ayudamos a dar el primer paso para cuidar tu sonrisa.</p>
+          <p>Escríbenos por WhatsApp y cuéntanos qué necesitas. Te ayudamos a dar el primer paso para cuidar tu sonrisa.
+          </p>
           <div class="cta-actions">
-            <a class="btn btn--wa btn--large" href="https://wa.me/523322436260?text=Hola%20Dental%20Moon%20Clinic%20%26%20Spa%2C%20quiero%20agendar%20una%20consulta." target="_blank" rel="noopener" aria-label="Agendar por WhatsApp">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.122 1.528 5.852L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.799-.517-5.389-1.42l-.387-.229-3.983 1.04 1.064-3.876-.252-.4A9.958 9.958 0 012 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
+            <a class="btn btn--wa btn--large"
+              href="https://wa.me/523322436260?text=Hola%20Dental%20Moon%20Clinic%20%26%20Spa%2C%20quiero%20agendar%20una%20consulta."
+              target="_blank" rel="noopener" aria-label="Agendar por WhatsApp">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                <path
+                  d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.122 1.528 5.852L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.799-.517-5.389-1.42l-.387-.229-3.983 1.04 1.064-3.876-.252-.4A9.958 9.958 0 012 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z" />
+              </svg>
               Agendar por WhatsApp
             </a>
             <a class="btn btn--outline-white btn--large" href="#guia-consulta">Completar guía de consulta</a>
-            <a class="btn btn--outline-white" href="https://www.instagram.com/dentalmoonclinic?igsh=MWVpZGF1cjhmemU5bw==" target="_blank" rel="noopener" aria-label="Instagram">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <a class="btn btn--outline-white"
+              href="https://www.instagram.com/dentalmoonclinic?igsh=MWVpZGF1cjhmemU5bw==" target="_blank" rel="noopener"
+              aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
               Instagram
             </a>
-            <a class="btn btn--outline-white" href="https://www.tiktok.com/@dental.moon.clini?_r=1&_t=ZS-97T3ey4E09I" target="_blank" rel="noopener" aria-label="TikTok">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34l.06-8.54a8.27 8.27 0 004.83 1.55v-3.4a4.85 4.85 0 01-1.13-.22z"/></svg>
+            <a class="btn btn--outline-white" href="https://www.tiktok.com/@dental.moon.clini?_r=1&_t=ZS-97T3ey4E09I"
+              target="_blank" rel="noopener" aria-label="TikTok">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34l.06-8.54a8.27 8.27 0 004.83 1.55v-3.4a4.85 4.85 0 01-1.13-.22z" />
+              </svg>
               TikTok
             </a>
           </div>
         </div>
         <div class="cta-image reveal reveal--delay" aria-hidden="true">
-          <img src="assets/images/nuevas-autorizadas/02-agenda-consulta.png" alt="" loading="lazy" width="600" height="700">
+          <img src="assets/images/nuevas-autorizadas/02-agenda-consulta.png" alt="" loading="lazy" width="600"
+            height="700">
         </div>
       </div>
     </section>
@@ -766,18 +1053,34 @@
       <div class="footer__brand">
         <picture>
           <source srcset="assets/logo/logo-oficial.webp" type="image/webp">
-          <img src="assets/logo/logo-oficial.jpg" alt="Logo oficial de Dental Moon Clinic &amp; Spa" width="90" height="90" loading="lazy">
+          <img src="assets/logo/logo-oficial.jpg" alt="Logo oficial de Dental Moon Clinic &amp; Spa" width="90"
+            height="90" loading="lazy">
         </picture>
-        <p><strong>Dental Moon Clinic &amp; Spa</strong><br>Atención dental profesional, salud, estética y bienestar.</p>
+        <p><strong>Dental Moon Clinic &amp; Spa</strong><br>Atención dental profesional, salud, estética y bienestar.
+        </p>
         <div class="footer__social">
-          <a href="https://www.instagram.com/dentalmoonclinic?igsh=MWVpZGF1cjhmemU5bw==" target="_blank" rel="noopener" aria-label="Instagram de Dental Moon Clinic">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          <a href="https://www.instagram.com/dentalmoonclinic?igsh=MWVpZGF1cjhmemU5bw==" target="_blank" rel="noopener"
+            aria-label="Instagram de Dental Moon Clinic">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg>
           </a>
-          <a href="https://www.tiktok.com/@dental.moon.clini?_r=1&_t=ZS-97T3ey4E09I" target="_blank" rel="noopener" aria-label="TikTok de Dental Moon Clinic">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34l.06-8.54a8.27 8.27 0 004.83 1.55v-3.4a4.85 4.85 0 01-1.13-.22z"/></svg>
+          <a href="https://www.tiktok.com/@dental.moon.clini?_r=1&_t=ZS-97T3ey4E09I" target="_blank" rel="noopener"
+            aria-label="TikTok de Dental Moon Clinic">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34l.06-8.54a8.27 8.27 0 004.83 1.55v-3.4a4.85 4.85 0 01-1.13-.22z" />
+            </svg>
           </a>
-          <a href="https://wa.me/523322436260" target="_blank" rel="noopener" aria-label="WhatsApp de Dental Moon Clinic">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.122 1.528 5.852L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.799-.517-5.389-1.42l-.387-.229-3.983 1.04 1.064-3.876-.252-.4A9.958 9.958 0 012 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
+          <a href="https://wa.me/523322436260" target="_blank" rel="noopener"
+            aria-label="WhatsApp de Dental Moon Clinic">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+              <path
+                d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.122 1.528 5.852L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.799-.517-5.389-1.42l-.387-.229-3.983 1.04 1.064-3.876-.252-.4A9.958 9.958 0 012 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z" />
+            </svg>
           </a>
         </div>
       </div>
@@ -786,8 +1089,10 @@
         <h3>Contacto</h3>
         <ul>
           <li><a href="https://wa.me/523322436260" target="_blank" rel="noopener">WhatsApp: +52 33 2243 6260</a></li>
-          <li><a href="https://www.instagram.com/dentalmoonclinic?igsh=MWVpZGF1cjhmemU5bw==" target="_blank" rel="noopener">Instagram: @dentalmoonclinic</a></li>
-          <li><a href="https://www.tiktok.com/@dental.moon.clini?_r=1&_t=ZS-97T3ey4E09I" target="_blank" rel="noopener">TikTok: @dental.moon.clini</a></li>
+          <li><a href="https://www.instagram.com/dentalmoonclinic?igsh=MWVpZGF1cjhmemU5bw==" target="_blank"
+              rel="noopener">Instagram: @dentalmoonclinic</a></li>
+          <li><a href="https://www.tiktok.com/@dental.moon.clini?_r=1&_t=ZS-97T3ey4E09I" target="_blank"
+              rel="noopener">TikTok: @dental.moon.clini</a></li>
           <li><a href="mailto:dentalmoon18@gmail.com">dentalmoon18@gmail.com</a></li>
         </ul>
       </div>
@@ -816,20 +1121,29 @@
   </footer>
 
   <!-- FLOATING WHATSAPP BUTTON -->
-  <a class="floating-wa" href="https://wa.me/523322436260?text=Hola%20Dental%20Moon%20Clinic%20%26%20Spa%2C%20quiero%20agendar%20una%20consulta." target="_blank" rel="noopener" aria-label="Agendar por WhatsApp" id="floatingWa">
+  <a class="floating-wa"
+    href="https://wa.me/523322436260?text=Hola%20Dental%20Moon%20Clinic%20%26%20Spa%2C%20quiero%20agendar%20una%20consulta."
+    target="_blank" rel="noopener" aria-label="Agendar por WhatsApp" id="floatingWa">
     <span class="floating-wa__pulse" aria-hidden="true"></span>
-    <svg class="floating-wa__icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.122 1.528 5.852L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.799-.517-5.389-1.42l-.387-.229-3.983 1.04 1.064-3.876-.252-.4A9.958 9.958 0 012 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
+    <svg class="floating-wa__icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+      <path
+        d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.122 1.528 5.852L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.799-.517-5.389-1.42l-.387-.229-3.983 1.04 1.064-3.876-.252-.4A9.958 9.958 0 012 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z" />
+    </svg>
     <span class="floating-wa__label">Agendar por WhatsApp</span>
   </a>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <noscript>
-    <div style="position:fixed;bottom:16px;left:16px;right:16px;z-index:9999;padding:16px;border-radius:18px;background:#ffeebf;color:#5b4719;text-align:center;">
+    <div
+      style="position:fixed;bottom:16px;left:16px;right:16px;z-index:9999;padding:16px;border-radius:18px;background:#ffeebf;color:#5b4719;text-align:center;">
       Para usar la guía interactiva y los botones dinámicos, activa JavaScript en tu navegador.
     </div>
   </noscript>
 
   <script src="js/main.js" defer></script>
 </body>
+
 </html>

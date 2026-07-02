@@ -1,168 +1,80 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="es-MX">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Aviso de privacidad | Dental Moon Clinic &amp; Spa</title>
-  <meta name="description" content="Aviso de privacidad de Dental Moon Clinic &amp; Spa. Conoce cómo manejamos tus datos personales.">
+  <title>Aviso de Privacidad Integral | Dental Moon Clinic &amp; Spa</title>
+  <meta name="description" content="Aviso de Privacidad Integral de Dental Moon Clinic &amp; Spa conforme a la LFPDPPP.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#0f2148">
   <link rel="icon" type="image/png" href="assets/logo/favicon.png">
-  <link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <style>
-    /* ── Estilos específicos del aviso de privacidad ── */
-    .privacy-hero {
-      background:
-        radial-gradient(circle at 80% 20%, rgba(74,135,200,.15), transparent 40rem),
-        linear-gradient(165deg, #f0f8ff 0%, #fafcff 60%, #fff 100%);
-      padding: 72px 0 56px;
-      border-bottom: 1px solid var(--line);
-    }
-    .privacy-hero__inner {
-      max-width: 760px;
-    }
-    .privacy-hero h1 {
-      font-family: 'Outfit', sans-serif;
-      font-size: clamp(2.2rem, 6vw, 3.8rem);
-      font-weight: 900;
-      color: var(--navy-950);
-      letter-spacing: -.04em;
-      line-height: 1.0;
-      margin: 16px 0 10px;
-    }
-    .privacy-hero__meta {
-      color: var(--muted);
-      font-size: .9rem;
-      margin: 0;
-    }
-    .privacy-body {
-      padding: 64px 0 80px;
-    }
-    .privacy-content {
-      max-width: 760px;
-    }
-    .privacy-content p {
-      color: var(--ink-80);
-      font-size: 1rem;
-      line-height: 1.75;
-      margin: 0 0 20px;
-    }
-    .privacy-content strong {
-      color: var(--navy-900);
-    }
-    .privacy-section {
-      margin: 40px 0;
-      padding: 28px 32px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: rgba(255,255,255,.85);
-      box-shadow: var(--shadow-sm);
-    }
-    .privacy-section h2 {
-      font-family: 'Outfit', sans-serif;
-      font-size: 1.15rem;
-      font-weight: 800;
-      color: var(--navy-900);
-      letter-spacing: -.02em;
-      margin: 0 0 14px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .privacy-section h2 .ps-num {
-      display: grid;
-      place-items: center;
-      width: 28px; height: 28px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--blue-50), var(--blue-100));
-      color: var(--blue-600);
-      font-size: .78rem;
-      font-weight: 900;
-      flex-shrink: 0;
-    }
-    .privacy-section p {
-      color: var(--muted);
-      font-size: .94rem;
-      line-height: 1.7;
-      margin: 0;
-    }
-    .privacy-section p + p {
-      margin-top: 12px;
-    }
-    .privacy-notice {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      padding: 18px 22px;
-      border: 1px solid rgba(253,224,71,.35);
-      border-radius: var(--radius);
-      background: rgba(255,251,235,.7);
-      color: #7c5c0e;
-      font-size: .88rem;
-      line-height: 1.6;
-      margin: 40px 0;
-    }
-    .privacy-notice svg { flex-shrink: 0; margin-top: 2px; }
-    .privacy-contact-box {
-      padding: 28px 32px;
-      border-radius: var(--radius);
-      background: linear-gradient(135deg, var(--navy-800), var(--navy-950));
-      color: #fff;
-      margin-top: 40px;
-    }
-    .privacy-contact-box h2 {
-      font-family: 'Outfit', sans-serif;
-      font-size: 1.2rem;
-      font-weight: 800;
-      color: #fff;
-      margin: 0 0 16px;
-    }
-    .privacy-contact-box p {
-      color: rgba(255,255,255,.75);
-      font-size: .92rem;
-      line-height: 1.65;
-      margin: 0 0 20px;
-    }
-    .privacy-contact-box a { color: var(--blue-300); }
-    .privacy-contact-box a:hover { color: #fff; }
-    .privacy-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 44px;
-    }
-    /* Header mínimo para esta página */
-    .privacy-header {
-      position: sticky; top: 0; z-index: 200;
-      background: rgba(255,255,255,.92);
-      backdrop-filter: saturate(180%) blur(20px);
-      border-bottom: 1px solid var(--line);
-      box-shadow: 0 4px 20px rgba(6,15,34,.07);
-    }
-    .privacy-header__inner {
-      min-height: 68px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-    }
-    @media (max-width: 640px) {
-      .privacy-hero { padding: 48px 0 36px; }
-      .privacy-body { padding: 40px 0 60px; }
-      .privacy-section { padding: 20px; }
-      .privacy-contact-box { padding: 20px; }
-      .privacy-actions { flex-direction: column; }
-      .privacy-actions .btn { width: 100%; justify-content: center; }
-    }
+    .privacy-header{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.95);backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--line);box-shadow:0 4px 20px rgba(6,15,34,.07);}
+    .privacy-header__inner{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+    .privacy-hero{background:radial-gradient(circle at 80% 20%,rgba(74,135,200,.15),transparent 40rem),linear-gradient(165deg,#0f2148 0%,#1a3570 60%,#1e3f7a 100%);padding:72px 0 56px;color:#fff;}
+    .privacy-hero__inner{max-width:820px;}
+    .privacy-hero .section-kicker{background:rgba(255,255,255,.15);color:rgba(255,255,255,.9);border:1px solid rgba(255,255,255,.2);}
+    .privacy-hero h1{font-family:'Outfit',sans-serif;font-size:clamp(2rem,6vw,3.4rem);font-weight:900;color:#fff;letter-spacing:-.04em;line-height:1.05;margin:16px 0 12px;}
+    .privacy-hero__meta{color:rgba(255,255,255,.7);font-size:.9rem;margin:0;}
+    .privacy-hero__subtitle{color:rgba(255,255,255,.85);font-size:1.05rem;margin:0 0 8px;font-weight:500;}
+    .privacy-index{background:var(--blue-50);border:1px solid var(--line);border-radius:var(--radius);padding:24px 28px;margin:0 0 40px;}
+    .privacy-index h2{font-family:'Outfit',sans-serif;font-size:1rem;font-weight:800;color:var(--navy-900);margin:0 0 14px;}
+    .privacy-index ol{margin:0;padding:0 0 0 20px;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 20px;}
+    .privacy-index li{font-size:.88rem;line-height:1.5;}
+    .privacy-index a{color:var(--blue-600);text-decoration:none;font-weight:500;}
+    .privacy-index a:hover{text-decoration:underline;}
+    .privacy-body{padding:64px 0 80px;}
+    .privacy-content{max-width:820px;}
+    .privacy-content p,.privacy-section p{color:var(--ink-80);font-size:.96rem;line-height:1.78;margin:0 0 14px;}
+    .privacy-section{margin:40px 0;scroll-margin-top:88px;}
+    .privacy-section__header{display:flex;align-items:center;gap:12px;margin-bottom:20px;padding-bottom:14px;border-bottom:2px solid var(--blue-100);}
+    .privacy-section__icon{font-size:1.4rem;line-height:1;flex-shrink:0;}
+    .privacy-section h2{font-family:'Outfit',sans-serif;font-size:1.25rem;font-weight:800;color:var(--navy-900);letter-spacing:-.02em;margin:0;}
+    .privacy-section h3{font-family:'Outfit',sans-serif;font-size:1rem;font-weight:700;color:var(--navy-800);margin:24px 0 12px;}
+    .privacy-list{list-style:none;padding:0;margin:0 0 14px;}
+    .privacy-list li{position:relative;padding:6px 0 6px 22px;color:var(--ink-80);font-size:.96rem;line-height:1.65;border-bottom:1px solid rgba(0,0,0,.04);}
+    .privacy-list li:last-child{border-bottom:none;}
+    .privacy-list li::before{content:'b';position:absolute;left:0;color:var(--blue-400);font-weight:900;}
+    .privacy-table-wrap{overflow-x:auto;border-radius:var(--radius);border:1px solid var(--line);margin:20px 0;}
+    .privacy-table{width:100%;border-collapse:collapse;font-size:.88rem;}
+    .privacy-table th{background:var(--navy-900);color:#fff;font-weight:700;padding:12px 16px;text-align:left;}
+    .privacy-table td{padding:10px 16px;border-bottom:1px solid var(--line);color:var(--ink-80);vertical-align:top;line-height:1.5;}
+    .privacy-table tr:last-child td{border-bottom:none;}
+    .privacy-table tr:nth-child(even) td{background:var(--blue-50);}
+    .arco-table{width:100%;border-collapse:collapse;font-size:.88rem;margin:16px 0;}
+    .arco-table th{background:linear-gradient(135deg,var(--navy-800),var(--navy-950));color:#fff;font-weight:700;padding:12px 16px;text-align:left;}
+    .arco-table td{padding:12px 16px;border-bottom:1px solid var(--line);color:var(--ink-80);vertical-align:top;line-height:1.6;}
+    .arco-table tr:last-child td{border-bottom:none;}
+    .arco-table tr:nth-child(even) td{background:rgba(74,135,200,.05);}
+    .arco-table td:first-child{font-weight:700;color:var(--navy-800);white-space:nowrap;}
+    .privacy-alert{display:flex;align-items:flex-start;gap:14px;padding:18px 22px;border-radius:var(--radius);margin:20px 0;font-size:.92rem;line-height:1.65;}
+    .privacy-alert__icon{font-size:1.3rem;flex-shrink:0;margin-top:1px;}
+    .privacy-alert--warning{border:1px solid rgba(251,191,36,.5);background:rgba(255,251,235,.8);color:#7c5c0e;}
+    .privacy-alert--success{border:1px solid rgba(74,222,128,.4);background:rgba(240,253,244,.8);color:#14532d;}
+    .privacy-alert--info{border:1px solid rgba(74,135,200,.35);background:rgba(239,246,255,.8);color:var(--navy-800);}
+    .privacy-alert strong{font-weight:700;}
+    .privacy-contact-box{padding:32px 36px;border-radius:var(--radius);background:linear-gradient(135deg,var(--navy-800),var(--navy-950));color:#fff;margin-top:48px;}
+    .privacy-contact-box h2{font-family:'Outfit',sans-serif;font-size:1.25rem;font-weight:800;color:#fff;margin:0 0 16px;}
+    .privacy-contact-box p{color:rgba(255,255,255,.78);font-size:.94rem;line-height:1.7;margin:0 0 20px;}
+    .privacy-contact-box a{color:var(--blue-300);}
+    .privacy-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:48px;}
+    .privacy-tech-section{margin-top:56px;padding-top:40px;border-top:2px dashed var(--line);}
+    .privacy-tech-section h2{font-family:'Outfit',sans-serif;font-size:1.2rem;font-weight:800;color:var(--navy-900);margin:0 0 6px;}
+    .subtitle{color:var(--muted);font-size:.88rem;margin:0 0 28px;display:block;}
+    .privacy-hallazgo{border:1px solid var(--line);border-radius:var(--radius);padding:22px 26px;margin:20px 0;background:rgba(255,255,255,.8);}
+    .privacy-hallazgo h3{font-family:'Outfit',sans-serif;font-size:1rem;font-weight:800;color:var(--navy-800);margin:0 0 10px;}
+    .privacy-hallazgo p{font-size:.92rem;color:var(--muted);line-height:1.7;margin:0 0 10px;}
+    .privacy-firma{text-align:center;padding:32px 24px;border:1px solid var(--line);border-radius:var(--radius);background:var(--blue-50);margin-top:40px;}
+    .privacy-firma p{color:var(--muted);font-size:.88rem;margin:4px 0;line-height:1.6;}
+    .privacy-firma strong{font-weight:700;color:var(--navy-800);font-size:1rem;}
+    @media(max-width:640px){.privacy-hero{padding:48px 0 36px;}.privacy-body{padding:36px 0 56px;}.privacy-contact-box{padding:22px;}.privacy-actions{flex-direction:column;}.privacy-actions .btn{width:100%;justify-content:center;}.privacy-index ol{grid-template-columns:1fr;}.privacy-table th,.privacy-table td,.arco-table th,.arco-table td{padding:8px 10px;font-size:.8rem;}.privacy-hallazgo{padding:16px 18px;}}
   </style>
 </head>
 <body>
-
-  <!-- Header mínimo -->
   <header class="privacy-header" role="banner">
     <div class="container privacy-header__inner">
       <a class="brand" href="index.html" aria-label="Regresar al inicio de Dental Moon Clinic &amp; Spa">
@@ -170,179 +82,268 @@
           <source srcset="assets/logo/logo-oficial.webp" type="image/webp">
           <img src="assets/logo/logo-oficial.jpg" alt="Logo de Dental Moon Clinic &amp; Spa" width="46" height="46" style="width:46px;height:46px;object-fit:contain;border-radius:12px;background:#fff;box-shadow:var(--shadow-sm);">
         </picture>
-        <span class="brand__text">
-          <strong>Dental Moon</strong>
-          <small>Clinic &amp; Spa</small>
-        </span>
+        <span class="brand__text"><strong>Dental Moon</strong><small>Clinic &amp; Spa</small></span>
       </a>
-      <a class="btn btn--primary" href="index.html" style="font-size:.88rem;padding:10px 18px;min-height:40px;">
-        ← Regresar al sitio
-      </a>
+      <a class="btn btn--primary" href="index.html" style="font-size:.88rem;padding:10px 18px;min-height:40px;">&larr; Volver al inicio</a>
     </div>
   </header>
-
   <main id="contenido">
-
-    <!-- Hero del aviso -->
     <div class="privacy-hero">
       <div class="container privacy-hero__inner">
-        <span class="section-kicker">Legal</span>
-        <h1>Aviso de privacidad</h1>
-        <p class="privacy-hero__meta">Última actualización: junio de 2026 · Dental Moon Clinic &amp; Spa</p>
+        <span class="section-kicker">Legal &middot; Privacidad</span>
+        <h1>Aviso de Privacidad Integral</h1>
+        <p class="privacy-hero__subtitle">Dental Moon Clinic &amp; Spa</p>
+        <p class="privacy-hero__meta">Valle de la Uva 5, La Selva, 47750 Atotonilco el Alto, Jalisco, M&eacute;xico &nbsp;&middot;&nbsp; &Uacute;ltima actualizaci&oacute;n: 25 de junio de 2026 &nbsp;&middot;&nbsp; Versi&oacute;n 1.0</p>
       </div>
     </div>
-
-    <!-- Cuerpo del aviso -->
     <section class="privacy-body" aria-labelledby="aviso-title">
       <div class="container privacy-content">
-
-        <p>
-          <strong>Dental Moon Clinic &amp; Spa</strong>, nombre comercial, con domicilio en
-          <strong>Valle de la Uva 5, La Selva, 47750 Atotonilco el Alto, Jalisco, México</strong>,
-          informa que los datos personales proporcionados por los usuarios a través de este sitio web,
-          formularios, WhatsApp, redes sociales o cualquier otro medio de contacto, serán utilizados
-          únicamente para atender solicitudes de información, responder mensajes, agendar citas y
-          dar seguimiento a la comunicación relacionada con los servicios de la clínica.
-        </p>
-
-        <p style="color:var(--muted);font-size:.92rem;padding:12px 16px;border-left:3px solid var(--blue-300);border-radius:0 8px 8px 0;background:var(--blue-50);">
-          <strong>Razón social o responsable legal:</strong> pendiente por confirmar.
-        </p>
-
-        <!-- Sección 1 -->
-        <div class="privacy-section">
-          <h2>
-            <span class="ps-num">1</span>
-            Datos personales que pueden recabarse
-          </h2>
-          <p>
-            Los datos que pueden recabarse son: nombre, teléfono, correo electrónico, mensaje de contacto,
-            servicio de interés y la información que el usuario proporcione voluntariamente al solicitar
-            orientación o agendar una consulta.
-          </p>
-          <p>
-            Debido a la naturaleza de los servicios dentales, el usuario podría compartir información
-            relacionada con molestias, síntomas o salud bucal. Esta información será utilizada únicamente
-            para orientar el contacto inicial y <strong>no representa un diagnóstico médico</strong>.
-            La valoración final deberá realizarla un profesional de la salud dental.
-          </p>
+        <div class="privacy-index">
+          <h2>&Iacute;ndice de secciones</h2>
+          <ol>
+            <li><a href="#sec-i">I. Identidad y domicilio del responsable</a></li>
+            <li><a href="#sec-ii">II. Datos personales que se recaban</a></li>
+            <li><a href="#sec-iii">III. Finalidades del tratamiento</a></li>
+            <li><a href="#sec-iv">IV. Transferencia de datos a terceros</a></li>
+            <li><a href="#sec-v">V. Derechos ARCO</a></li>
+            <li><a href="#sec-vi">VI. Medidas de seguridad</a></li>
+            <li><a href="#sec-vii">VII. Cookies y tecnolog&iacute;as similares</a></li>
+            <li><a href="#sec-viii">VIII. Datos de menores de edad</a></li>
+            <li><a href="#sec-ix">IX. Redes sociales y canales digitales</a></li>
+            <li><a href="#sec-x">X. Modificaciones al aviso</a></li>
+            <li><a href="#sec-xi">XI. Autoridad competente &mdash; INAI</a></li>
+            <li><a href="#sec-xii">XII. Consentimiento</a></li>
+          </ol>
         </div>
-
-        <!-- Sección 2 -->
-        <div class="privacy-section">
-          <h2>
-            <span class="ps-num">2</span>
-            Finalidad del tratamiento de datos
-          </h2>
-          <p>
-            <strong>Dental Moon Clinic &amp; Spa</strong> no vende, renta ni comercializa datos personales.
-            La información podrá ser utilizada únicamente para fines de contacto, seguimiento,
-            atención de solicitudes y cumplimiento de obligaciones legales aplicables.
-          </p>
+        <!-- I -->
+        <div class="privacy-section" id="sec-i">
+          <div class="privacy-section__header"><span class="privacy-section__icon">&#9789;</span><h2>I. Identidad y domicilio del responsable</h2></div>
+          <p>Con fundamento en los art&iacute;culos 15 y 16 de la <strong>Ley Federal de Protecci&oacute;n de Datos Personales en Posesi&oacute;n de los Particulares</strong> (en adelante &laquo;LFPDPPP&raquo;), su Reglamento y los Lineamientos del Aviso de Privacidad emitidos por el Instituto Nacional de Transparencia, Acceso a la Informaci&oacute;n y Protecci&oacute;n de Datos Personales (INAI), <strong>Dental Moon Clinic &amp; Spa</strong> (en adelante &laquo;la Cl&iacute;nica&raquo; o &laquo;el Responsable&raquo;), con domicilio en <strong>Valle de la Uva 5, La Selva, C.P. 47750, Atotonilco el Alto, Jalisco, M&eacute;xico</strong>, hace de su conocimiento la siguiente pol&iacute;tica de privacidad que rige el tratamiento de sus datos personales.</p>
         </div>
-
-        <!-- Sección 3 -->
-        <div class="privacy-section">
-          <h2>
-            <span class="ps-num">3</span>
-            Derechos ARCO
-          </h2>
-          <p>
-            El usuario puede solicitar el acceso, rectificación, cancelación u oposición al tratamiento
-            de sus datos personales, así como revocar su consentimiento, enviando un correo a:
-          </p>
-          <p>
-            <a href="mailto:dentalmoon18@gmail.com" style="color:var(--blue-600);font-weight:700;">dentalmoon18@gmail.com</a>
-          </p>
+        <!-- II -->
+        <div class="privacy-section" id="sec-ii">
+          <div class="privacy-section__header"><span class="privacy-section__icon">&#9789;</span><h2>II. Datos personales que se recaban</h2></div>
+          <h3>A) Datos personales generales</h3>
+          <ul class="privacy-list">
+            <li><strong>Identificaci&oacute;n:</strong> nombre completo, fecha de nacimiento, edad, sexo, estado civil, CURP.</li>
+            <li><strong>Contacto:</strong> n&uacute;mero de tel&eacute;fono, n&uacute;mero de WhatsApp, direcci&oacute;n de correo electr&oacute;nico, domicilio.</li>
+            <li><strong>Contacto de emergencia:</strong> nombre y tel&eacute;fono de familiar o persona de confianza.</li>
+            <li><strong>Fiscales:</strong> RFC y datos de facturaci&oacute;n (&uacute;nicamente cuando el titular solicite comprobante fiscal).</li>
+          </ul>
+          <h3>B) Datos personales sensibles &mdash; Requieren consentimiento expreso</h3>
+          <p>De conformidad con el art&iacute;culo 9 de la LFPDPPP, la Cl&iacute;nica recaba y trata los siguientes datos personales sensibles, cuya divulgaci&oacute;n indebida puede originar discriminaci&oacute;n o conllevar un riesgo grave para su titular:</p>
+          <ul class="privacy-list">
+            <li><strong>Historial cl&iacute;nico odontol&oacute;gico:</strong> diagn&oacute;sticos, tratamientos realizados, radiograf&iacute;as y estudios de imagen, odontograma, pron&oacute;sticos y evoluci&oacute;n cl&iacute;nica. (Datos integrantes del expediente cl&iacute;nico conforme a la NOM-004-SSA3-2012.)</li>
+            <li><strong>Estado de salud general:</strong> padecimientos sist&eacute;micos (diabetes, hipertensi&oacute;n, cardiopat&iacute;as, trastornos de coagulaci&oacute;n, etc.), discapacidades y estado general de salud declarado por el titular.</li>
+            <li><strong>Alergias y reacciones adversas:</strong> alergias a medicamentos, materiales dentales o anest&eacute;sicos.</li>
+            <li><strong>Medicaci&oacute;n actual:</strong> medicamentos que el titular consume de forma habitual o eventual.</li>
+            <li><strong>Informaci&oacute;n gen&eacute;tica:</strong> &uacute;nicamente en los casos cl&iacute;nicos que as&iacute; lo requieran.</li>
+          </ul>
+          <div class="privacy-alert privacy-alert--warning">
+            <span class="privacy-alert__icon">&#9888;</span>
+            <div><strong>Consentimiento expreso &mdash; Datos sensibles</strong><br>El tratamiento de sus datos personales sensibles requiere su consentimiento expreso y por escrito, otorgado de manera libre, espec&iacute;fica e informada. Dicho consentimiento se recabar&aacute; mediante firma aut&oacute;grafa en el expediente cl&iacute;nico f&iacute;sico o, para los canales digitales, a trav&eacute;s de un mecanismo de aceptaci&oacute;n activa (casilla de verificaci&oacute;n / checkbox) previo al env&iacute;o de cualquier formulario electr&oacute;nico. En ausencia de su consentimiento, la Cl&iacute;nica no podr&aacute; prestar los servicios odontol&oacute;gicos que impliquen el acceso a dichos datos.</div>
+          </div>
         </div>
-
-        <!-- Sección 4 -->
-        <div class="privacy-section">
-          <h2>
-            <span class="ps-num">4</span>
-            Plataformas externas
-          </h2>
-          <p>
-            Este sitio puede contener enlaces a plataformas externas como WhatsApp, Instagram o TikTok.
-            El uso de dichas plataformas se rige por sus propios términos y políticas de privacidad.
-          </p>
+        <!-- III -->
+        <div class="privacy-section" id="sec-iii">
+          <div class="privacy-section__header"><span class="privacy-section__icon">&#9789;</span><h2>III. Finalidades del tratamiento</h2></div>
+          <h3>A) Finalidades primarias &mdash; Necesarias para la prestaci&oacute;n del servicio</h3>
+          <p>El tratamiento de sus datos personales es indispensable para cumplir las siguientes finalidades, derivadas de la relaci&oacute;n jur&iacute;dica entre la Cl&iacute;nica y el titular del servicio:</p>
+          <ul class="privacy-list">
+            <li>Prestaci&oacute;n de servicios odontol&oacute;gicos integrales (revisi&oacute;n, diagn&oacute;stico, tratamiento y seguimiento).</li>
+            <li>Integraci&oacute;n, resguardo y gesti&oacute;n del expediente cl&iacute;nico electr&oacute;nico y f&iacute;sico, conforme a la NOM-004-SSA3-2012 (conservaci&oacute;n m&iacute;nima de 5 a&ntilde;os a partir del &uacute;ltimo acto m&eacute;dico).</li>
+            <li>Agendamiento, confirmaci&oacute;n, modificaci&oacute;n y cancelaci&oacute;n de citas.</li>
+            <li>Emisi&oacute;n de presupuestos, cobros y, en su caso, comprobantes fiscales digitales (CFDI).</li>
+            <li>Comunicaci&oacute;n en situaciones de urgencia m&eacute;dica con el contacto designado por el titular.</li>
+            <li>Cumplimiento de obligaciones legales ante autoridades de salud (COFEPRIS, Secretar&iacute;a de Salud de Jalisco) y tributarias (SAT).</li>
+          </ul>
+          <h3>B) Finalidades secundarias &mdash; Opcionales; el titular puede negarse</h3>
+          <p>Las siguientes finalidades no son necesarias para la prestaci&oacute;n del servicio. Si no desea que sus datos sean tratados para estos fines, puede manifestarlo en cualquier momento sin que ello afecte la atenci&oacute;n cl&iacute;nica que recibe:</p>
+          <ul class="privacy-list">
+            <li>Env&iacute;o de comunicaciones comerciales, promociones, paquetes y descuentos de la Cl&iacute;nica por WhatsApp, correo electr&oacute;nico o SMS.</li>
+            <li>Recordatorios preventivos peri&oacute;dicos (limpieza semestral, revisiones anuales).</li>
+            <li>Encuestas de satisfacci&oacute;n y evaluaci&oacute;n de la calidad del servicio.</li>
+            <li>Publicaci&oacute;n de casos de &eacute;xito o fotograf&iacute;as de resultados en redes sociales (Instagram / TikTok), previa autorizaci&oacute;n expresa y espec&iacute;fica para cada publicaci&oacute;n.</li>
+          </ul>
+          <div class="privacy-alert privacy-alert--info">
+            <span class="privacy-alert__icon">&#128203;</span>
+            <div><strong>C&oacute;mo negarse a las finalidades secundarias</strong><br>Para oponerse al tratamiento de sus datos con fines secundarios, env&iacute;e un mensaje a <a href="mailto:dentalmoon18@gmail.com" style="color:var(--blue-600);">dentalmoon18@gmail.com</a> con el asunto &laquo;Oposici&oacute;n Finalidades Secundarias&raquo; indicando su nombre completo y los fines espec&iacute;ficos a los que se opone. Su solicitud ser&aacute; atendida en un plazo m&aacute;ximo de <strong>20 d&iacute;as h&aacute;biles</strong>. La negativa no afectar&aacute; en ning&uacute;n caso la prestaci&oacute;n de los servicios odontol&oacute;gicos contratados.</div>
+          </div>
         </div>
-
-        <!-- Sección 5 -->
-        <div class="privacy-section">
-          <h2>
-            <span class="ps-num">5</span>
-            Cambios a este aviso
-          </h2>
-          <p>
-            Dental Moon Clinic &amp; Spa podrá actualizar este aviso de privacidad cuando sea necesario.
-            Los cambios estarán disponibles en esta misma página.
-          </p>
+        <!-- IV -->
+        <div class="privacy-section" id="sec-iv">
+          <div class="privacy-section__header"><span class="privacy-section__icon">&#9789;</span><h2>IV. Transferencia de datos a terceros</h2></div>
+          <p>De conformidad con el art&iacute;culo 37 de la LFPDPPP, la Cl&iacute;nica podr&aacute; transferir sus datos personales sin requerir su consentimiento &uacute;nicamente en los supuestos previstos en dicho art&iacute;culo (obligaciones legales con autoridades competentes). Para las dem&aacute;s transferencias, se requerir&aacute; su consentimiento previo, informado y expreso.</p>
+          <div class="privacy-table-wrap">
+            <table class="privacy-table" aria-label="Tabla de transferencias de datos">
+              <thead><tr><th>Destinatario</th><th>Finalidad de la transferencia</th><th>Consentimiento requerido</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Laboratorios dentales externos</strong></td><td>Elaboraci&oacute;n de pr&oacute;tesis, implantes, alineadores u otras restauraciones que requieran laboratorio externo.</td><td><strong>S&Iacute;</strong> &mdash; Se requiere consentimiento expreso del titular.</td></tr>
+                <tr><td><strong>Compa&ntilde;&iacute;as aseguradoras y/o financieras de salud</strong></td><td>Validaci&oacute;n de cobertura, reembolso de gastos m&eacute;dicos o coaseguro dental cuando el titular cuente con seguro m&eacute;dico.</td><td><strong>S&Iacute;</strong> &mdash; Se requiere consentimiento expreso del titular.</td></tr>
+                <tr><td><strong>Autoridades de salud (COFEPRIS, SS Jalisco) y tributarias (SAT)</strong></td><td>Cumplimiento de obligaciones legales, auditor&iacute;as o requerimientos de autoridad competente.</td><td><strong>NO</strong> &mdash; Art. 37 LFPDPPP (obligaci&oacute;n legal).</td></tr>
+                <tr><td><strong>Proveedores de plataformas digitales (WhatsApp Business, Meta, Google)</strong></td><td>Comunicaci&oacute;n con pacientes, agendamiento y gesti&oacute;n de redes sociales; sujeto a las pol&iacute;ticas de privacidad de cada plataforma.</td><td>Impl&iacute;cito en el uso del canal por parte del titular (art. 8 p&aacute;rr. 2 LFPDPPP).</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>La Cl&iacute;nica <strong>no vende, renta ni comercializa</strong> sus datos personales a terceros con fines de mercadotecnia no relacionados con sus servicios.</p>
         </div>
-
-        <!-- Aviso legal -->
-        <div class="privacy-notice" role="note">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
-          </svg>
-          <span>
-            <strong>Nota:</strong> Este aviso es un texto informativo general y se recomienda validarlo
-            con un asesor legal antes de la publicación final.
-          </span>
+        <!-- V -->
+        <div class="privacy-section" id="sec-v">
+          <div class="privacy-section__header"><span class="privacy-section__icon">&#9789;</span><h2>V. Derechos ARCO &mdash; Acceso, Rectificaci&oacute;n, Cancelaci&oacute;n y Oposici&oacute;n</h2></div>
+          <p>Conforme a los art&iacute;culos 22 al 35 de la LFPDPPP, usted tiene derecho a ejercer en cualquier momento sus derechos ARCO respecto de los datos personales que la Cl&iacute;nica posee sobre usted:</p>
+          <div class="privacy-table-wrap">
+            <table class="arco-table" aria-label="Tabla de derechos ARCO">
+              <thead><tr><th>Derecho</th><th>Descripci&oacute;n y alcance</th></tr></thead>
+              <tbody>
+                <tr><td>ACCESO (A)</td><td>Conocer qu&eacute; datos personales suyos tratamos, con qu&eacute; finalidad, el origen de los mismos y las transferencias realizadas o previstas.</td></tr>
+                <tr><td>RECTIFICACI&Oacute;N (R)</td><td>Solicitar la correcci&oacute;n de datos inexactos, desactualizados, incompletos o err&oacute;neos que obren en nuestros registros.</td></tr>
+                <tr><td>CANCELACI&Oacute;N (C)</td><td>Requerir la supresi&oacute;n de sus datos de nuestras bases, previo bloqueo, cuando: (i) no sean necesarios para las finalidades que motivaron su recaba; (ii) haya vencido el plazo legal de conservaci&oacute;n; o (iii) haya sido revocado su consentimiento.</td></tr>
+                <tr><td>OPOSICI&Oacute;N (O)</td><td>Oponerse al tratamiento de sus datos para finalidades espec&iacute;ficas o a ser contactado con fines publicitarios o de prospecci&oacute;n comercial.</td></tr>
+                <tr><td>REVOCACI&Oacute;N DEL CONSENTIMIENTO</td><td>Retirar en cualquier momento el consentimiento previamente otorgado para el tratamiento de sus datos, incluyendo los datos sensibles, sin efecto retroactivo.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3>Procedimiento para ejercer sus derechos ARCO</h3>
+          <ul class="privacy-list">
+            <li>Nombre completo del titular y domicilio o correo electr&oacute;nico para recibir la respuesta.</li>
+            <li>Descripci&oacute;n clara y precisa del derecho que desea ejercer y los datos sobre los que recae la solicitud.</li>
+            <li>Documentos que acrediten su identidad (identificaci&oacute;n oficial vigente: INE, pasaporte o c&eacute;dula profesional).</li>
+            <li>En caso de actuar como representante legal, documento que acredite la representaci&oacute;n.</li>
+            <li>Cualquier elemento o informaci&oacute;n que facilite la localizaci&oacute;n de sus datos personales.</li>
+          </ul>
+          <h3>Canales de contacto para ejercer sus derechos ARCO</h3>
+          <ul class="privacy-list">
+            <li><strong>Correo electr&oacute;nico (canal principal):</strong> <a href="mailto:dentalmoon18@gmail.com" style="color:var(--blue-600);font-weight:600;">dentalmoon18@gmail.com</a> &mdash; Asunto: &laquo;Ejercicio de Derechos ARCO&raquo;.</li>
+            <li><strong>WhatsApp:</strong> <a href="https://wa.me/523322436260" target="_blank" rel="noopener" style="color:var(--blue-600);font-weight:600;">+52 33 2243 6260</a> (para consultas previas; la solicitud formal debe realizarse por escrito).</li>
+            <li><strong>Presencialmente:</strong> Valle de la Uva 5, La Selva, 47750 Atotonilco el Alto, Jalisco, en horario de atenci&oacute;n.</li>
+          </ul>
+          <p>La Cl&iacute;nica responder&aacute; su solicitud en un plazo m&aacute;ximo de <strong>20 d&iacute;as h&aacute;biles</strong> contados a partir de su recepci&oacute;n. En caso de que la solicitud resulte procedente, los efectos se har&aacute;n efectivos dentro de los <strong>15 d&iacute;as h&aacute;biles</strong> siguientes a la comunicaci&oacute;n de la respuesta. Estos plazos podr&aacute;n ser ampliados por una sola vez por un per&iacute;odo igual, cuando as&iacute; lo justifiquen las circunstancias del caso.</p>
         </div>
-
-        <!-- Caja de contacto -->
+        <!-- VI -->
+        <div class="privacy-section" id="sec-vi">
+          <div class="privacy-section__header"><span class="privacy-section__icon">&#9789;</span><h2>VI. Medidas de seguridad</h2></div>
+          <p>La Cl&iacute;nica implementa medidas de seguridad administrativas, t&eacute;cnicas y f&iacute;sicas para proteger sus datos personales contra da&ntilde;o, p&eacute;rdida, alteraci&oacute;n, destrucci&oacute;n, acceso o uso no autorizado, conforme al art&iacute;culo 19 de la LFPDPPP:</p>
+          <ul class="privacy-list">
+            <li><strong>Administrativas:</strong> pol&iacute;ticas internas de acceso y manejo de datos, capacitaci&oacute;n del personal en materia de privacidad y confidencialidad, cl&aacute;usulas de confidencialidad en contratos con colaboradores.</li>
+            <li><strong>T&eacute;cnicas:</strong> acceso restringido mediante contrase&ntilde;as a bases de datos digitales, uso de comunicaciones cifradas (HTTPS en el sitio web, cifrado de extremo a extremo en WhatsApp Business), y copias de seguridad peri&oacute;dicas.</li>
+            <li><strong>F&iacute;sicas:</strong> resguardo de expedientes cl&iacute;nicos en instalaciones con acceso restringido al personal autorizado, y destrucci&oacute;n segura de documentos al vencimiento del plazo legal de conservaci&oacute;n.</li>
+          </ul>
+          <p>Los datos sensibles contenidos en el expediente cl&iacute;nico se conservar&aacute;n por un m&iacute;nimo de <strong>5 (cinco) a&ntilde;os</strong> a partir del &uacute;ltimo acto m&eacute;dico, de conformidad con la NOM-004-SSA3-2012. Transcurrido dicho plazo, y en ausencia de disposici&oacute;n legal diversa, ser&aacute;n bloqueados y posteriormente suprimidos.</p>
+        </div>
+        <!-- VII -->
+        <div class="privacy-section" id="sec-vii">
+          <div class="privacy-section__header"><span class="privacy-section__icon">&#9789;</span><h2>VII. Uso de cookies, web beacons y tecnolog&iacute;as similares</h2></div>
+          <p>El sitio web <strong>www.dentalmoonclinic.com.mx</strong> podr&aacute; utilizar cookies y tecnolog&iacute;as similares para mejorar la experiencia del usuario, analizar el tr&aacute;fico web y medir el rendimiento del sitio. A la fecha de actualizaci&oacute;n de este Aviso, el sitio opera como una p&aacute;gina est&aacute;tica con funcionalidad b&aacute;sica. En la medida en que se incorporen herramientas de an&aacute;lisis (como Google Analytics) o p&iacute;xeles de redes sociales (Meta Pixel, TikTok Pixel), este apartado ser&aacute; actualizado para reflejar dichas pr&aacute;cticas.</p>
+          <p>Las cookies no recaban datos personales sensibles. Usted puede deshabilitar el uso de cookies desde la configuraci&oacute;n de su navegador; sin embargo, esto podr&iacute;a afectar la funcionalidad de algunas secciones del sitio.</p>
+        </div>
+        <!-- VIII -->
+        <div class="privacy-section" id="sec-viii">
+          <div class="privacy-section__header"><span class="privacy-section__icon">&#9789;</span><h2>VIII. Tratamiento de datos de menores de edad (Odontopediatr&iacute;a)</h2></div>
+          <p>Para la prestaci&oacute;n de servicios de odontopediatr&iacute;a, el tratamiento de datos personales de menores de edad requerir&aacute; el <strong>consentimiento previo y expreso de sus padres o tutores legales</strong>. Los padres o tutores tienen el derecho de ejercer, en nombre del menor, los derechos ARCO descritos en la Secci&oacute;n V de este Aviso.</p>
+          <p>La Cl&iacute;nica no publicar&aacute; fotograf&iacute;as, videos ni informaci&oacute;n que permita identificar a menores de edad en sus canales digitales sin el consentimiento expreso, firmado y espec&iacute;fico de sus padres o tutores para cada publicaci&oacute;n.</p>
+        </div>
+        <!-- IX -->
+        <div class="privacy-section" id="sec-ix">
+          <div class="privacy-section__header"><span class="privacy-section__icon">&#9789;</span><h2>IX. Redes sociales y canales digitales</h2></div>
+          <p>La Cl&iacute;nica mantiene presencia en las siguientes plataformas digitales: <strong>Instagram</strong> (@dentalmoonclinic) y <strong>TikTok</strong> (@dental.moon.clini). La informaci&oacute;n que usted comparte de manera p&uacute;blica en dichas plataformas est&aacute; sujeta a las pol&iacute;ticas de privacidad de cada red social, las cuales son independientes de este Aviso. Se recomienda revisar los t&eacute;rminos de privacidad de Meta (Instagram) y ByteDance (TikTok) directamente en sus sitios oficiales.</p>
+          <p>Las interacciones realizadas a trav&eacute;s de <strong>WhatsApp</strong> est&aacute;n sujetas a las Pol&iacute;ticas de Privacidad de WhatsApp LLC (Meta). La Cl&iacute;nica recabar&aacute; y conservar&aacute; &uacute;nicamente los datos estrictamente necesarios para la prestaci&oacute;n del servicio odontol&oacute;gico a trav&eacute;s de dicho canal.</p>
+        </div>
+        <!-- X -->
+        <div class="privacy-section" id="sec-x">
+          <div class="privacy-section__header"><span class="privacy-section__icon">&#9789;</span><h2>X. Modificaciones al aviso de privacidad</h2></div>
+          <p>La Cl&iacute;nica se reserva el derecho de actualizar o modificar el presente Aviso de Privacidad en cualquier momento, a fin de dar cumplimiento a cambios en la legislaci&oacute;n aplicable, nuevas pr&aacute;cticas operativas o nuevas finalidades de tratamiento de datos personales.</p>
+          <p>Cualquier modificaci&oacute;n al presente Aviso le ser&aacute; notificada a trav&eacute;s de una o m&aacute;s de las siguientes v&iacute;as: (i) publicaci&oacute;n de la versi&oacute;n actualizada en <strong>www.dentalmoonclinic.com.mx/aviso-privacidad.html</strong>; (ii) comunicaci&oacute;n directa al correo electr&oacute;nico o n&uacute;mero de WhatsApp registrados en nuestros sistemas. El uso continuado de los servicios de la Cl&iacute;nica con posterioridad a la notificaci&oacute;n de cambios implicar&aacute; la aceptaci&oacute;n de los mismos, salvo que usted manifieste lo contrario.</p>
+        </div>
+        <!-- XI -->
+        <div class="privacy-section" id="sec-xi">
+          <div class="privacy-section__header"><span class="privacy-section__icon">&#9789;</span><h2>XI. Autoridad competente &mdash; INAI</h2></div>
+          <p>Si usted considera que su derecho a la protecci&oacute;n de datos personales ha sido vulnerado por alguna conducta u omisi&oacute;n de la Cl&iacute;nica, o presume que en el tratamiento de sus datos personales existe alguna violaci&oacute;n a las disposiciones de la LFPDPPP, podr&aacute; interponer la queja o denuncia correspondiente ante el <strong>Instituto Nacional de Transparencia, Acceso a la Informaci&oacute;n y Protecci&oacute;n de Datos Personales (INAI)</strong>:</p>
+          <ul class="privacy-list">
+            <li><strong>Sitio web:</strong> <a href="https://www.inai.org.mx" target="_blank" rel="noopener" style="color:var(--blue-600);">www.inai.org.mx</a></li>
+            <li><strong>Portal de quejas:</strong> www.inai.org.mx (secci&oacute;n &laquo;Ciudadanos&raquo; / &laquo;Protecci&oacute;n de Datos&raquo;)</li>
+            <li><strong>Tel&eacute;fono:</strong> 800 835 4324</li>
+          </ul>
+        </div>
+        <!-- XII -->
+        <div class="privacy-section" id="sec-xii">
+          <div class="privacy-section__header"><span class="privacy-section__icon">&#9789;</span><h2>XII. Consentimiento</h2></div>
+          <p>Al proporcionar sus datos personales a <strong>Dental Moon Clinic &amp; Spa</strong>, ya sea de forma presencial, a trav&eacute;s del sitio web, por WhatsApp o por cualquier otro canal habilitado por la Cl&iacute;nica, usted manifiesta haber le&iacute;do, entendido y aceptado los t&eacute;rminos del presente Aviso de Privacidad Integral, y otorga su consentimiento para el tratamiento de sus datos personales generales con las finalidades primarias descritas en la Secci&oacute;n III-A.</p>
+          <div class="privacy-alert privacy-alert--success">
+            <span class="privacy-alert__icon">&#10003;</span>
+            <div><strong>Consentimiento expreso para datos sensibles</strong><br>El tratamiento de sus datos personales sensibles (historial cl&iacute;nico, estado de salud, alergias, medicaci&oacute;n) requiere que usted otorgue su consentimiento <strong>EXPRESO Y POR ESCRITO</strong>. Dicho consentimiento ser&aacute; recabado:<br><br><strong>(1) Presencialmente:</strong> mediante su firma aut&oacute;grafa en el formulario de Historia Cl&iacute;nica al inicio de su primera consulta.<br><br><strong>(2) V&iacute;a digital:</strong> mediante la selecci&oacute;n activa de la casilla de verificaci&oacute;n (&laquo;checkbox&raquo;) incluida en los formularios electr&oacute;nicos del sitio web, con la leyenda: &laquo;He le&iacute;do y acepto el Aviso de Privacidad Integral de Dental Moon Clinic &amp; Spa, y consiento expresamente el tratamiento de mis datos personales sensibles para la prestaci&oacute;n de servicios odontol&oacute;gicos.&raquo;<br><br>Usted puede revocar este consentimiento en cualquier momento conforme al procedimiento indicado en la Secci&oacute;n V.</div>
+          </div>
+        </div>
+        <!-- Firma -->
+        <div class="privacy-firma">
+          <strong>Dental Moon Clinic &amp; Spa</strong>
+          <p>Valle de la Uva 5, La Selva, 47750 Atotonilco el Alto, Jalisco, M&eacute;xico</p>
+          <p><a href="mailto:dentalmoon18@gmail.com" style="color:var(--blue-600);">dentalmoon18@gmail.com</a> &nbsp;&middot;&nbsp; <a href="https://wa.me/523322436260" target="_blank" rel="noopener" style="color:var(--blue-600);">+52 33 2243 6260</a> &nbsp;&middot;&nbsp; <a href="https://www.dentalmoonclinic.com.mx" target="_blank" rel="noopener" style="color:var(--blue-600);">www.dentalmoonclinic.com.mx</a></p>
+          <p>Aviso de Privacidad Integral &mdash; Versi&oacute;n 1.0 &mdash; Junio 2026</p>
+        </div>
+        <!-- Recomendaciones -->
+        <div class="privacy-tech-section">
+          <h2>Recomendaciones de integraci&oacute;n t&eacute;cnica y legal</h2>
+          <span class="subtitle">Dirigidas al equipo de desarrollo del sitio web &mdash; Para implementaci&oacute;n inmediata</span>
+          <p>El an&aacute;lisis del sitio www.dentalmoonclinic.com.mx revel&oacute; los siguientes puntos de incumplimiento potencial que deben ser atendidos para garantizar la legalidad del tratamiento de datos conforme a la LFPDPPP y los Lineamientos del INAI:</p>
+          <div class="privacy-hallazgo">
+            <h3>&#9888; Hallazgo 1 &mdash; Mecanismo de consentimiento en la &laquo;Gu&iacute;a de consulta&raquo;</h3>
+            <p>La Gu&iacute;a de Consulta interactiva (secci&oacute;n guia-consulta del sitio) captura, antes del env&iacute;o por WhatsApp, los siguientes datos del usuario: nombre completo, tel&eacute;fono, tipo de consulta, zona dental afectada, s&iacute;ntomas, nivel de molestia y tiempo de evoluci&oacute;n. Los s&iacute;ntomas y el estado de salud constituyen datos personales sensibles conforme al Art. 3 Fracc. VI de la LFPDPPP.</p>
+            <p><strong>Acci&oacute;n requerida:</strong> Incorporar, en el Paso 01 de la gu&iacute;a (campo de datos de contacto), un checkbox de aceptaci&oacute;n obligatorio. El bot&oacute;n &laquo;Siguiente&raquo; o &laquo;Generar mensaje&raquo; no debe habilitarse si el checkbox no ha sido seleccionado. Texto exacto del checkbox: &laquo;He le&iacute;do y acepto el Aviso de Privacidad Integral de Dental Moon Clinic &amp; Spa y otorgo mi consentimiento expreso para el tratamiento de mis datos personales, incluidos los datos de salud que proporcione en esta gu&iacute;a, exclusivamente para recibir orientaci&oacute;n y agendar mi consulta odontol&oacute;gica.&raquo;</p>
+          </div>
+          <div class="privacy-hallazgo">
+            <h3>&#9888; Hallazgo 2 &mdash; Enlace a Aviso de Privacidad con p&aacute;gina de destino</h3>
+            <p>El footer del sitio contiene el enlace &laquo;Aviso de privacidad&raquo; apuntando a /aviso-privacidad.html, pero dicha p&aacute;gina debe estar publicada y accesible. Esto es una exigencia directa del art&iacute;culo 16 de la LFPDPPP.</p>
+            <p><strong>Acci&oacute;n requerida:</strong> Publicar el contenido de este Aviso de Privacidad Integral en la URL <strong>www.dentalmoonclinic.com.mx/aviso-privacidad.html</strong> antes de reactivar cualquier captaci&oacute;n de datos a trav&eacute;s del sitio web.</p>
+          </div>
+          <div class="privacy-hallazgo">
+            <h3>&#9888; Hallazgo 3 &mdash; WhatsApp como canal de captaci&oacute;n de datos sin notificaci&oacute;n previa</h3>
+            <p>El canal principal de agenda y captaci&oacute;n es WhatsApp. La Cl&iacute;nica tiene la obligaci&oacute;n de informar sobre su propio tratamiento de datos antes de iniciar la comunicaci&oacute;n.</p>
+            <p><strong>Acci&oacute;n recomendada:</strong> Incluir en el primer mensaje de respuesta el enlace al Aviso de Privacidad. Ejemplo: &laquo;Bienvenido/a a Dental Moon Clinic &amp; Spa. Para gestionar su cita, necesitamos recabar algunos datos personales. Le informamos que el tratamiento de su informaci&oacute;n se rige por nuestro Aviso de Privacidad, disponible en: www.dentalmoonclinic.com.mx/aviso-privacidad.html&raquo;.</p>
+          </div>
+          <div class="privacy-hallazgo">
+            <h3>&#9888; Hallazgo 4 &mdash; Ausencia de certificado HTTPS verificado y pol&iacute;tica de cookies</h3>
+            <p>El sitio debe operar bajo HTTPS con certificado TLS v&aacute;lido y mostrar un banner de cookies (aunque la implementaci&oacute;n actual sea est&aacute;tica) como medida preventiva para cuando se integren herramientas de anal&iacute;tica web o p&iacute;xeles de conversi&oacute;n.</p>
+          </div>
+          <div class="privacy-alert privacy-alert--success" style="margin-top:24px;">
+            <span class="privacy-alert__icon">&#10003;</span>
+            <div><strong>Recomendaci&oacute;n adicional &mdash; Expediente cl&iacute;nico f&iacute;sico</strong><br>Para la consulta presencial, se recomienda que el formulario de Historia Cl&iacute;nica incluya, en texto legible y en tipograf&iacute;a no menor a 9 puntos, la leyenda: &laquo;Sus datos personales ser&aacute;n tratados conforme al Aviso de Privacidad Integral disponible en www.dentalmoonclinic.com.mx/aviso-privacidad.html. Al firmar este documento, usted otorga su consentimiento expreso para el tratamiento de sus datos personales sensibles con las finalidades descritas en dicho Aviso.&raquo; Seguida de espacio para firma aut&oacute;grafa, nombre y fecha.</div>
+          </div>
+          <div class="privacy-alert privacy-alert--success">
+            <span class="privacy-alert__icon">&#10003;</span>
+            <div><strong>Recomendaci&oacute;n adicional &mdash; Registro de consentimientos</strong><br>La Cl&iacute;nica debe mantener un registro interno (bit&aacute;cora) de los consentimientos otorgados por los titulares, especificando: fecha de otorgamiento, medio por el que se otorg&oacute; (presencial/digital), versi&oacute;n del Aviso vigente al momento del consentimiento, y datos identificativos del titular. Este registro deber&aacute; estar disponible para acreditar el cumplimiento ante el INAI en caso de inspecci&oacute;n o denuncia.</div>
+          </div>
+          <p style="color:var(--muted);font-size:.82rem;margin-top:28px;">Documento preparado por: Global Manufacturing Ex, S.A. de C.V. / Nomo Laboral &mdash; Consultor&iacute;a en Derecho Laboral y Protecci&oacute;n de Datos<br>Tepatitl&aacute;n de Morelos, Jalisco, M&eacute;xico &mdash; Junio 2026</p>
+        </div>
+        <!-- Contacto -->
         <div class="privacy-contact-box">
           <h2>Contacto para temas de privacidad</h2>
-          <p>
-            Correo: <a href="mailto:dentalmoon18@gmail.com">dentalmoon18@gmail.com</a><br>
-            WhatsApp: <a href="https://wa.me/523322436260" target="_blank" rel="noopener">+52 33 2243 6260</a><br>
-            Dirección: Valle de la Uva 5, La Selva, 47750 Atotonilco el Alto, Jal.
-          </p>
+          <p>Correo: <a href="mailto:dentalmoon18@gmail.com">dentalmoon18@gmail.com</a><br>WhatsApp: <a href="https://wa.me/523322436260" target="_blank" rel="noopener">+52 33 2243 6260</a><br>Direcci&oacute;n: Valle de la Uva 5, La Selva, 47750 Atotonilco el Alto, Jal.</p>
           <a class="btn btn--wa" href="https://wa.me/523322436260?text=Hola%20Dental%20Moon%20Clinic%20%26%20Spa%2C%20tengo%20una%20pregunta%20sobre%20el%20aviso%20de%20privacidad." target="_blank" rel="noopener" style="display:inline-flex;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-              <path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.122 1.528 5.852L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.799-.517-5.389-1.42l-.387-.229-3.983 1.04 1.064-3.876-.252-.4A9.958 9.958 0 012 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/>
-            </svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.122 1.528 5.852L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.799-.517-5.389-1.42l-.387-.229-3.983 1.04 1.064-3.876-.252-.4A9.958 9.958 0 012 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
             Contactar por WhatsApp
           </a>
         </div>
-
-        <!-- Botones de navegación -->
+        <!-- Botones -->
         <div class="privacy-actions">
-          <a class="btn btn--primary btn--large" href="index.html">
-            ← Regresar al inicio
-          </a>
+          <a class="btn btn--primary btn--large" href="index.html">&larr; Regresar al inicio</a>
           <a class="btn btn--wa btn--large" href="https://wa.me/523322436260?text=Hola%20Dental%20Moon%20Clinic%20%26%20Spa%2C%20quiero%20agendar%20una%20consulta." target="_blank" rel="noopener">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-              <path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.122 1.528 5.852L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.799-.517-5.389-1.42l-.387-.229-3.983 1.04 1.064-3.876-.252-.4A9.958 9.958 0 012 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/>
-            </svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.555 4.122 1.528 5.852L0 24l6.335-1.652A11.954 11.954 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.96 0-3.799-.517-5.389-1.42l-.387-.229-3.983 1.04 1.064-3.876-.252-.4A9.958 9.958 0 012 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/></svg>
             Agendar por WhatsApp
           </a>
           <a class="btn btn--outline" href="mailto:dentalmoon18@gmail.com">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
-            </svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             dentalmoon18@gmail.com
           </a>
         </div>
-
       </div>
     </section>
-
   </main>
-
-  <!-- Footer mínimo -->
-  <footer style="background:var(--navy-950);color:rgba(255,255,255,.5);padding:24px 0;font-size:.82rem;">
+  <footer style="background:var(--navy-950);color:rgba(255,255,255,.5);padding:28px 0;font-size:.82rem;">
     <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
-      <span>© <span id="year"></span> Dental Moon Clinic &amp; Spa. Todos los derechos reservados.</span>
-      <a href="index.html" style="color:var(--blue-300);">← Volver al sitio principal</a>
+      <span>&copy; <span id="year"></span> Dental Moon Clinic &amp; Spa. Todos los derechos reservados.</span>
+      <a href="index.html" style="color:var(--blue-300);">&larr; Volver al sitio principal</a>
     </div>
   </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
